@@ -6,23 +6,35 @@ body {
 }
 
 body {
-  background-color:black;
+  background-color:#26547C;
 }
 
 h1 {
-  color: #373fff;
+  color: #FFD166;
   font-size: 4em;
+  margin-bottom: 0;
+}
+
+#main {
+  margin: 0 0 0 0;
+  color: #49E1B9;
 }
 
 #mainInput {
-  background-color: white;
-  color: black;
+  background-color: #EF476F;
+  color: white;
   border:none;
   width: 50vw;
   height: 5vh;
   font-size: 2em;
+  padding: 1%;
 }
 
 #mainInput:focus {
   outline:none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #f590a8;
+  opacity: 1; /* Firefox */
 }
