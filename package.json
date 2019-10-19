@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "tone": "^14.3.17"
+    "jquery": "^3.4.1"
   }
 }
