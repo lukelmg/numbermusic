@@ -15,9 +15,14 @@ h1 {
   margin-bottom: 0;
 }
 
-#main {
-  margin: 0 0 0 0;
-  color: #49E1B9;
+.main {
+  margin-top:5px;
+  font-weigth:bold;
+  font-size: 1.5em;
+  color: white;
+  font-style:italic;
+  background-color:#10c495;
+  width: 18vw;
 }
 
 #mainInput {
