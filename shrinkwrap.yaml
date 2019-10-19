@@ -519,4 +519,4 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  tone: ^14.3.18
+  tone: ^14.3.17
