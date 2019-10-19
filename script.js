@@ -44,31 +44,30 @@ function getNumber () {
     output.push(+sNumber.charAt(i));
   }  
   
+  alert("hello");
    note1 = output[length - length];
-   note2 = output[length - length + 1];
-   note3 = output[length - length + 2];
-   note4 = output[length - length + 3];
-   note5 = output[length - length + 4];
-   note6 = output[length - length + 5];
-   note7 = output[length - length + 6];
-   note8 = output[length - length + 7];
-   note9 = output[length - length + 8];
-   note10 = output[length - length + 9];
-  
-  //alert(note1);
-  
-  playNotes();
-  
+   detectNote1();
+   note1 = output[length - length + 1];
+   detectNote1();
+   note1 = output[length - length + 2];
+   detectNote1();
+   note1 = output[length - length + 3];
+   detectNote1();
+   note1 = output[length - length + 4];
+   detectNote1();
+   note1 = output[length - length + 5];
+   detectNote1();
+   note1 = output[length - length + 6];
+   detectNote1();
+   note1 = output[length - length + 7];
+   detectNote1();
+   note1 = output[length - length + 8];
+   detectNote1();
+   note1 = output[length - length + 9];
+   detectNote1();
+
 }
-
-function playNotes() {
-  detectNote1();
-}
-
-
 function detectNote1() {
-  
-  
   if (note1 == 1 || note1 == 8) {A.play();}
   if (note1 == 2 || note1 == 9) {B.play();}
   if (note1 == 3 || note1 == 0) {C.play();}
@@ -76,6 +75,7 @@ function detectNote1() {
   if (note1 == 5) {E.play();}
   if (note1 == 6) {F.play();}
   if (note1 == 7) {G.play();}
+  setTimeout(detectNote1,500);
 }
 
 
@@ -84,3 +84,14 @@ $(document).on('keypress',function(e) {
         getNumber();
     }
 });
+  
+  var check = function(){
+    if(1==1){
+        // run when condition is met
+    }
+    else {
+        setTimeout(check, 1000); // check again in a second
+    }
+}
+
+check();
