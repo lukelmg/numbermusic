@@ -10,7 +10,6 @@ var E = document.getElementById("pianoE");
 var F = document.getElementById("pianoF");
 var G = document.getElementById("pianoG");
 
-var sNumber;
 
 function getNumber () {
   var mynumber = document.getElementById("mainInput").value;
@@ -21,8 +20,9 @@ function getNumber () {
   for (var i = 0, len = sNumber.length; i < len; i += 1) {
     output.push(+sNumber.charAt(i));
   }  
-  alert(output);
-
+  if (output == 1) {
+    A.play();
+  }
 }
 
 $(document).on('keypress',function(e) {
