@@ -10,9 +10,19 @@ var E = document.getElementById("pianoE");
 var F = document.getElementById("pianoF");
 var G = document.getElementById("pianoG");
 
+var sNumber;
+
 function getNumber () {
-  var number = document.getElementById("mainInput").value;
-  alert(number);
+  var mynumber = document.getElementById("mainInput").value;
+  var number = mynumber,
+    output = [],
+    sNumber = number.toString();
+  
+  for (var i = 0, len = sNumber.length; i < len; i += 1) {
+    output.push(+sNumber.charAt(i));
+  }  
+  alert(output);
+
 }
 
 $(document).on('keypress',function(e) {
