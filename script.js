@@ -2,14 +2,6 @@ var input = document.getElementById('mainInput');
 input.focus();
 input.select();
 
-var A = document.getElementById("pianoA");
-var B = document.getElementById("pianoB");
-var C = document.getElementById("pianoC");
-var D = document.getElementById("pianoD");
-var E = document.getElementById("pianoE");
-var F = document.getElementById("pianoF");
-var G = document.getElementById("pianoG");
-
 
 var note1;
 var note2;
@@ -37,11 +29,22 @@ function getNumber () {
   var note9 = output[length - length + 8];
   var note10 = output[length - length + 9];
   
+  //alert(note1);
+  
   playNotes();
   
 }
 
 function playNotes() {
+  
+  var A = document.getElementById("pianoA");
+var B = document.getElementById("pianoB");
+var C = document.getElementById("pianoC");
+var D = document.getElementById("pianoD");
+var E = document.getElementById("pianoE");
+var F = document.getElementById("pianoF");
+var G = document.getElementById("pianoG");
+  
   if (note1 == 0) {
     A.play();
   } else {
@@ -49,6 +52,7 @@ function playNotes() {
       B.play();
     }
   }
+ 
 }
 
 
