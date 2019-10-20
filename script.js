@@ -45,9 +45,12 @@ function getNumber() {
   for (var i = 0, len = sNumber.length; i < len; i += 1) {
     output.push(+sNumber.charAt(i));
   }
-
-    note1 = output[(length)];
-    detectNote1()
+    while (lengthcount < length) {
+      note1 = output[(length)];
+      detectNote1();
+      //sleep(500);
+      lengthcount = lengthcount + 1;
+    }
 
 }
 function detectNote1() {
