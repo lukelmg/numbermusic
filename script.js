@@ -31,10 +31,13 @@ var noteE = 5;
 var noteF = 6;
 var noteG = 7;
 
+var lengthcount = 0;
+
 function getNumber() {
   var mynumber = document.getElementById("mainInput").value;
   var length = mynumber.toString().length;
   length = length - 1;
+  
   var number = mynumber,
     output = [],
     sNumber = number.toString();
@@ -43,66 +46,30 @@ function getNumber() {
     output.push(+sNumber.charAt(i));
   }
 
-  note1 = output[length - length];
-  detectNote1();
+    note1 = output[(length)];
+    detectNote1()
 
-  setTimeout(function() {
-    note1 = output[length - length + 1];
-    detectNote1();
-    setTimeout(function() {
-      note1 = output[length - length + 2];
-      detectNote1();
-      setTimeout(function() {
-        note1 = output[length - length + 3];
-        detectNote1();
-        setTimeout(function() {
-          note1 = output[length - length + 4];
-          detectNote1();
-          setTimeout(function() {
-            note1 = output[length - length + 5];
-            detectNote1();
-            setTimeout(function() {
-              note1 = output[length - length + 6];
-              detectNote1();
-              setTimeout(function() {
-                note1 = output[length - length + 7];
-                detectNote1();
-                setTimeout(function() {
-                  note1 = output[length - length + 8];
-                  detectNote1();
-                  setTimeout(function() {
-                    note1 = output[length - length + 9];
-                    detectNote1();
-                  }, timeBetween);
-                }, timeBetween);
-              }, timeBetween);
-            }, timeBetween);
-          }, timeBetween);
-        }, timeBetween);
-      }, timeBetween);
-    }, timeBetween);
-  }, timeBetween);
 }
 function detectNote1() {
   if (note1 == 1 || note1 == 8) {
     A.play();
   }
-  if (note1 == 2 || note1 == 9) {
+   else if (note1 == 2 || note1 == 9) {
     B.play();
   }
-  if (note1 == 3 || note1 == 0) {
+   else if (note1 == 3 || note1 == 0) {
     C.play();
   }
-  if (note1 == 4) {
+   else if (note1 == 4) {
     D.play();
   }
-  if (note1 == 5) {
+  else if (note1 == 5) {
     E.play();
   }
-  if (note1 == 6) {
+  else if (note1 == 6) {
     F.play();
   }
-  if (note1 == 7) {
+  else if (note1 == 7) {
     G.play();
   }
 }
@@ -122,3 +89,13 @@ var check = function() {
 };
 
 check();
+
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
