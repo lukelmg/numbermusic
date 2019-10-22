@@ -26,18 +26,23 @@ function getNumber() {
   var number = mynumber,
     output = [],
     sNumber = number.toString();
+    
+  alert(sNumber);
 
   for (var i = 0, len = sNumber.length; i < len; i += 1) {
     output.push(+sNumber.charAt(i)); //change i to lengthcount
-  }
+    sleep(250);
+ }
 
   for (var i = 0; i < length + 1; i++) {
+     // output.push(+sNumber.charAt(lengthcount));
       note1 = output[length - length + lengthcount];
       detectNote1();
     
       noteToPlay[letterNote]();
     
       lengthcount = lengthcount + 1;
+      sleep(125);
   }
 }
 
