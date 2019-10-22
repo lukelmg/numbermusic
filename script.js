@@ -23,13 +23,6 @@ var note8;
 var note9;
 var note10;
 
-var noteA = [1, 8];
-var noteB = [2, 9];
-var noteC = [3, 0];
-var noteD = 4;
-var noteE = 5;
-var noteF = 6;
-var noteG = 7;
 
 var lengthcount = 0;
 
@@ -49,12 +42,12 @@ function getNumber() {
   }
 
   for (var i = 0; i < length + 1; i++) {
-    setTimeout(function() {
       note1 = output[length - length + lengthcount];
       detectNote1();
+    
       noteToPlay[letterNote]();
+    
       lengthcount = lengthcount + 1;
-    }, 500);
   }
 }
 
@@ -63,9 +56,9 @@ var noteToPlay = {
   B: function() {B.play();},
   C: function() {C.play();},
   D: function() {D.play();},
-  E: function() {E.play(); alert},
-  F: function() {F.play(); alert("F");},
-  G: function() {G.play(); alert("G");}
+  E: function() {E.play();},
+  F: function() {F.play();},
+  G: function() {G.play();}
 };
 
 function detectNote1() {
