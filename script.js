@@ -28,7 +28,7 @@ function getNumber() {
     sNumber = number.toString();
 
   for (var i = 0, len = sNumber.length; i < len; i += 1) {
-    output.push(+sNumber.charAt(i));
+    output.push(+sNumber.charAt(i)); //change i to lengthcount
   }
 
   for (var i = 0; i < length + 1; i++) {
