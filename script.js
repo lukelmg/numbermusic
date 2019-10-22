@@ -49,30 +49,52 @@ function getNumber() {
   for (var i = 0; i < length + 1; i++) {
     setTimeout(function() {
       note1 = output[length - length + lengthcount];
+      alert(note1);
       detectNote1();
       lengthcount = lengthcount + 1;
-    }, 10);
+    }, 500);
   }
 }
+
+var noteToPlay = {
+  A: function() {A.play();},
+  B: function() {B.play();},
+  C: function() {C.play();},
+  D: function() {D.play();},
+  E: function() {E.play();},
+  F: function() {F.play();},
+  G: function() {G.play();}
+};
+
 function detectNote1() {
-  
-  if (note1 == 1 )
-  
   if (note1 == 1 || note1 == 8) {
     A.play();
-  } else if (note1 == 2 || note1 == 9) {
-    B.play();
-  } else if (note1 == 3 || note1 == 0) {
-    C.play();
-  } else if (note1 == 4) {
-    D.play();
-  } else if (note1 == 5) {
-    E.play();
-  } else if (note1 == 6) {
-    F.play();
-  } else if (note1 == 7) {
-    G.play();
+  } else {
+    if (note1 == 2 || note1 == 9) {
+      B.play();
+    } else {
+      if (note1 == 3 || note1 == 0) {
+        C.play();
+      } else {
+        if (note1 == 4) {
+          D.play();
+        } else {
+          if (note1 == 5) {
+            E.play();
+          } else {
+            if (note1 == 6) {
+              F.play();
+            } else {
+              if (note1 == 7) {
+                G.play();
+              }
+            }
+          }
+        }
+      }
+    }
   }
+
   document.getElementById("output").innerHTML = note1;
 }
 
