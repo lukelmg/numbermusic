@@ -33,6 +33,8 @@ var noteG = 7;
 
 var lengthcount = 0;
 
+var letterNote = 'A';
+
 function getNumber() {
   var mynumber = document.getElementById("mainInput").value;
   var length = mynumber.toString().length;
@@ -49,8 +51,8 @@ function getNumber() {
   for (var i = 0; i < length + 1; i++) {
     setTimeout(function() {
       note1 = output[length - length + lengthcount];
-      alert(note1);
       detectNote1();
+      noteToPlay[letterNote]();
       lengthcount = lengthcount + 1;
     }, 500);
   }
@@ -61,32 +63,32 @@ var noteToPlay = {
   B: function() {B.play();},
   C: function() {C.play();},
   D: function() {D.play();},
-  E: function() {E.play();},
-  F: function() {F.play();},
-  G: function() {G.play();}
+  E: function() {E.play(); alert},
+  F: function() {F.play(); alert("F");},
+  G: function() {G.play(); alert("G");}
 };
 
 function detectNote1() {
   if (note1 == 1 || note1 == 8) {
-    A.play();
+    letterNote = 'A';
   } else {
     if (note1 == 2 || note1 == 9) {
-      B.play();
+      letterNote = 'B';
     } else {
       if (note1 == 3 || note1 == 0) {
-        C.play();
+       letterNote = 'C';
       } else {
         if (note1 == 4) {
-          D.play();
+          letterNote = 'D';
         } else {
           if (note1 == 5) {
-            E.play();
+            letterNote = 'E';
           } else {
             if (note1 == 6) {
-              F.play();
+              letterNote = 'F';
             } else {
               if (note1 == 7) {
-                G.play();
+                letterNote = 'G';
               }
             }
           }
