@@ -13,25 +13,15 @@ var F = document.getElementById("pianoF");
 var G = document.getElementById("pianoG");
 
 var note1;
-var note2;
-var note3;
-var note4;
-var note5;
-var note6;
-var note7;
-var note8;
-var note9;
-var note10;
-
 
 var lengthcount = 0;
 
 var letterNote = 'A';
 
 function getNumber() {
-  var mynumber = document.getElementById("mainInput").value;
-  var length = mynumber.toString().length;
-  length = length - 1;
+  var mynumber = document.getElementById("mainInput").value; //get number of input
+  var length = mynumber.toString().length; //calculate length of input
+  length = length - 1; //subtract 1 so that 0 counts
 
   var number = mynumber,
     output = [],
