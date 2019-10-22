@@ -48,7 +48,7 @@ function getNumber() {
     while (lengthcount < length) {
       note1 = output[(length)];
       detectNote1();
-      //sleep(500);
+      sleep(500);
       lengthcount = lengthcount + 1;
     }
 
@@ -75,6 +75,7 @@ function detectNote1() {
   else if (note1 == 7) {
     G.play();
   }
+  document.getElementById("output").innerHTML = note1;
 }
 
 $(document).on("keypress", function(e) {
