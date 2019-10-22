@@ -37,7 +37,7 @@ function getNumber() {
   var mynumber = document.getElementById("mainInput").value;
   var length = mynumber.toString().length;
   length = length - 1;
-  
+
   var number = mynumber,
     output = [],
     sNumber = number.toString();
@@ -45,34 +45,32 @@ function getNumber() {
   for (var i = 0, len = sNumber.length; i < len; i += 1) {
     output.push(+sNumber.charAt(i));
   }
-    while (lengthcount < length) {
-      note1 = output[(length)];
-      detectNote1();
-      sleep(500);
-      lengthcount = lengthcount + 1;
-    }
 
+  for (var i = 0; i < length + 1; i++) {
+    setTimeout(function() {
+      note1 = output[length - length + lengthcount];
+      detectNote1();
+      lengthcount = lengthcount + 1;
+    }, 10);
+  }
 }
 function detectNote1() {
+  
+  if (note1 == 1 )
+  
   if (note1 == 1 || note1 == 8) {
     A.play();
-  }
-   else if (note1 == 2 || note1 == 9) {
+  } else if (note1 == 2 || note1 == 9) {
     B.play();
-  }
-   else if (note1 == 3 || note1 == 0) {
+  } else if (note1 == 3 || note1 == 0) {
     C.play();
-  }
-   else if (note1 == 4) {
+  } else if (note1 == 4) {
     D.play();
-  }
-  else if (note1 == 5) {
+  } else if (note1 == 5) {
     E.play();
-  }
-  else if (note1 == 6) {
+  } else if (note1 == 6) {
     F.play();
-  }
-  else if (note1 == 7) {
+  } else if (note1 == 7) {
     G.play();
   }
   document.getElementById("output").innerHTML = note1;
@@ -84,21 +82,10 @@ $(document).on("keypress", function(e) {
   }
 });
 
-var check = function() {
-  if (1 == 1) {
-    // run when condition is met
-  } else {
-    setTimeout(check, 1000); // check again in a second
-  }
-};
-
-check();
-
-
 function sleep(milliseconds) {
   var start = new Date().getTime();
   for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
+    if (new Date().getTime() - start > milliseconds) {
       break;
     }
   }
