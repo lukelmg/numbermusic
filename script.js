@@ -16,7 +16,7 @@ var note1;
 
 var lengthcount = 0;
 
-var letterNote = 'A';
+var letterNote = "A";
 
 function getNumber() {
   var mynumber = document.getElementById("mainInput").value; //get number of input
@@ -26,57 +26,69 @@ function getNumber() {
   var number = mynumber,
     output = [],
     sNumber = number.toString();
-    
+
   alert(sNumber);
 
-  for (var i = 0, len = sNumber.length; i < len; i += 1) {
-    output.push(+sNumber.charAt(i)); //change i to lengthcount
-    sleep(250);
- }
-
-  for (var i = 0; i < length + 1; i++) {
-     // output.push(+sNumber.charAt(lengthcount));
+  for (var i = 0; i < length; i++) {
+    setTimeout(function() {
+      output.push(+sNumber.charAt(i)); //change i to lengthcount
       note1 = output[length - length + lengthcount];
       detectNote1();
-    
+
       noteToPlay[letterNote]();
-    
+
       lengthcount = lengthcount + 1;
-      sleep(125);
+
+      console.log("Test");
+    }, 500 * i);
   }
 }
 
 var noteToPlay = {
-  A: function() {A.play();},
-  B: function() {B.play();},
-  C: function() {C.play();},
-  D: function() {D.play();},
-  E: function() {E.play();},
-  F: function() {F.play();},
-  G: function() {G.play();}
+  A: function() {
+    A.play();
+  },
+  B: function() {
+    B.play();
+  },
+  C: function() {
+    C.play();
+  },
+  D: function() {
+    D.play();
+  },
+  E: function() {
+    E.play();
+  },
+  F: function() {
+    F.play();
+  },
+  G: function() {
+    G.play();
+  }
 };
 
 function detectNote1() {
   if (note1 == 1 || note1 == 8) {
-    letterNote = 'A';
+    letterNote = "A";
   } else {
     if (note1 == 2 || note1 == 9) {
-      letterNote = 'B';
+      letterNote = "B";
     } else {
       if (note1 == 3 || note1 == 0) {
-       letterNote = 'C';
+        letterNote = "C";
       } else {
         if (note1 == 4) {
-          letterNote = 'D';
+          letterNote = "D";
         } else {
           if (note1 == 5) {
-            letterNote = 'E';
+            letterNote = "E";
           } else {
             if (note1 == 6) {
-              letterNote = 'F';
+              letterNote = "F";
             } else {
               if (note1 == 7) {
-                letterNote = 'G';
+                letterNote = "G";
               }
             }
           }
