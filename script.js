@@ -19,9 +19,9 @@ var lengthcount = 0;
 var letterNote = "A";
 
 function getNumber() {
+  
   var mynumber = document.getElementById("mainInput").value; //get number of input
   var length = mynumber.toString().length; //calculate length of input
-  length = length; //subtract 1 so that 0 counts
 
   var number = mynumber,
     output = [],
@@ -41,11 +41,17 @@ function getNumber() {
 
       console.log("Test");
     }, timeBetween * i);
+        //alert("i= " + i + " length = " + length);
     
-    
-          if (i == (lengthcount + 1)) {
-            alert("broken");
-        break;
+          if (i == (length -1 )) {
+            i = 0;
+            mynumber = "";
+            length = "";
+            number = "";
+            lengthcount = 0;
+            
+            break;
+        
       }
   }
   
