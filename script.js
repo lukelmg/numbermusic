@@ -30,6 +30,7 @@ function getNumber() {
  
 
   for (var i = 0; i < length; i++) {
+    o.stop()
     setTimeout(function() {
       output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
       note1 = output[length - length + lengthcount];
@@ -57,9 +58,21 @@ function getNumber() {
   
 }
 
+ var o = context.createOscillator()
+
 var noteToPlay = {
   A: function() {
-    A.play();
+    //A.play();
+    
+    var frequency = 440.0
+    var context = new AudioContext()
+    o.type = "sine"
+    o.connect(context.destination)
+    o.start()
+    o.frequency.value = frequency
+    
+    
+    
   },
   B: function() {
     B.play();
