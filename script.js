@@ -126,7 +126,7 @@ function detectNote1() {
     }
   }
 
-  document.getElementById("output").innerHTML = note1;
+  document.getElementById("output").innerHTML = letterNote;
 }
 
 $(document).on("keypress", function(e) {
