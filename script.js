@@ -40,7 +40,7 @@ function getNumber() {
       lengthcount = lengthcount + 1;
 
       console.log("Test");
-    }, 500 * i);
+    }, timeBetween * i);
   }
 }
 
