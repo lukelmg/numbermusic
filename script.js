@@ -27,11 +27,11 @@ function getNumber() {
     output = [],
     sNumber = number.toString();
 
-  alert(sNumber);
+ 
 
   for (var i = 0; i < length; i++) {
     setTimeout(function() {
-      output.push(+sNumber.charAt(i)); //change i to lengthcount
+      output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
       note1 = output[length - length + lengthcount];
       detectNote1();
 
