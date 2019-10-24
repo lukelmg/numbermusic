@@ -2,7 +2,7 @@ var input = document.getElementById("mainInput");
 input.focus();
 input.select();
 
-var timeBetween = 400;
+var timeBetween = 325;
 
 var A = document.getElementById("pianoA");
 var B = document.getElementById("pianoB");
