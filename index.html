@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <audio id="pianoA" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20A.wav?v=1571579863573"></audio>
+    <audio id="pianoB" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20B.wav?v=1571579867423"></audio>
+    <audio id="pianoC" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20C.wav?v=1571579869671"></audio>
+    <audio id="pianoD" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20D.wav?v=1571579871425"></audio>
+    <audio id="pianoE" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20E.wav?v=1571579874241"></audio>
+    <audio id="pianoF" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20F.wav?v=1571579877306"></audio>
+    <audio id="pianoG" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20G.wav?v=1571579879154"></audio>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <h1>Numbers to Music</h1>
+    <p class="main">Copyright &copy Luke Gutman, 2019</p>
+    <input id="mainInput" type="number" placeholder="Type Numbers Here"><br><br>
+    <button onclick="getNumber();">Submit</button>
+       <br><br> <span>Note:</span><span id="output"></span>
+    
+    
+    <h2>Major Scales</h2>
+    <button id="Cmaj">C Major</button>
+    <button id="Dmaj">D Major</button>
+    <button id="Emaj">E Major</button>
+    <button id="Fmaj">F Major</button>
+    <button id="Gmaj">G Major</button>
+    <button id="Amaj">A Major</button>
+    <button id="Bmaj">B Major</button>
+    <button id="C#maj">C# Major</button>
+    <button id="D#maj">D# Major</button>
+    <button id="F#maj">F# Major</button>
+    <button id="G#maj">G# Major</button>
+    <button id="A#maj">A# Major</button>
+    
+    <h2>Jazz Scales</h2>
+    <button id="Gblue">G Blues</button>
+    <button id="Cblue">C Blues</button>
+  </body>
+</html>

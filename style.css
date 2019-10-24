@@ -1,0 +1,44 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+body {
+  background-color:#26547C;
+}
+
+h1 {
+  color: #FFD166;
+  font-size: 4em;
+  margin-bottom: 0;
+}
+
+.main {
+  margin-top:5px;
+  font-weigth:bold;
+  font-size: 1.5em;
+  color: white;
+  font-style:italic;
+  width: 30vw;
+}
+
+#mainInput {
+  background-color: #10c495;
+  color: white;
+  border:none;
+  width: 50vw;
+  height: 5vh;
+  font-size: 2em;
+  padding: 1%;
+}
+
+#mainInput:focus {
+  outline:none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #42dbb3;
+  opacity: 1; /* Firefox */
+}
