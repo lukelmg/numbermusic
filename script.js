@@ -2,7 +2,7 @@ var input = document.getElementById("mainInput");
 input.focus();
 input.select();
 
-var timeBetween = 1;
+var timeBetween = 250;
 var noteDuration = 250;
 
 var A = document.getElementById("pianoA");
@@ -175,6 +175,48 @@ function detectNote1() {
   }
 
   document.getElementById("output").innerHTML = letterNote;
+}
+
+function cmajor() {
+  if (note1 == 1) {
+    letterNote = "C5";
+  } else {
+    if (note1 == 2) {
+      letterNote = "D5";
+    } else {
+      if (note1 == 3) {
+        letterNote = "E5";
+      } else {
+        if (note1 == 4) {
+          letterNote = "F5";
+        } else {
+          if (note1 == 5) {
+            letterNote = "G5";
+          } else {
+            if (note1 == 6) {
+              letterNote = "A5";
+            } else {
+              if (note1 == 7) {
+                letterNote = "B5";
+              } else {
+                if (note1 == 8) {
+                  letterNote = "C6";
+                } else {
+                  if (note1 == 9) {
+                    letterNote = "D6"; 
+                  } else {
+                    if (note1 == 0) {
+                      letterNote = "E6"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 $(document).on("keypress", function(e) {
