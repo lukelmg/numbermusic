@@ -33,7 +33,7 @@ function getNumber() {
       note1 = output[length - length + lengthcount];
       detectNote1();
 
-      noteToPlay[letterNote + "4"]();
+      noteToPlay[letterNote]();
 
       lengthcount = lengthcount + 1;
 
@@ -135,34 +135,34 @@ var noteToPlay = {
 
 function detectNote1() {
   if (note1 == 1) {
-    letterNote = "C6";
+    letterNote = "C5";
   } else {
     if (note1 == 2) {
-      letterNote = "D6";
+      letterNote = "D5";
     } else {
       if (note1 == 3) {
-        letterNote = "E6";
+        letterNote = "E5";
       } else {
         if (note1 == 4) {
-          letterNote = "F6";
+          letterNote = "F5";
         } else {
           if (note1 == 5) {
-            letterNote = "G6";
+            letterNote = "G5";
           } else {
             if (note1 == 6) {
-              letterNote = "A6";
+              letterNote = "A5";
             } else {
               if (note1 == 7) {
-                letterNote = "B6";
+                letterNote = "B5";
               } else {
-                if (note1 ==8) {
-                  letterNote = "C7";
+                if (note1 == 8) {
+                  letterNote = "C6";
                 } else {
                   if (note1 == 9) {
-                    letterNote = "D7"; 
+                    letterNote = "D6"; 
                   } else {
                     if (note1 == 0) {
-                      letterNote = "E7"
+                      letterNote = "E6"
                     }
                   }
                 }
