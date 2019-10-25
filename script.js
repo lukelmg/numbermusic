@@ -2,7 +2,7 @@ var input = document.getElementById("mainInput");
 input.focus();
 input.select();
 
-var timeBetween = 250;
+var timeBetween = 10;
 var noteDuration = 250;
 
 var A = document.getElementById("pianoA");
@@ -248,4 +248,15 @@ function playNote(frequency, duration) {
   setTimeout(function() {
     oscillator.stop();
   }, duration);
+}
+
+letterValue();
+function letterValue(str){
+    //var cmajorNotes={
+    //    C5: 1, D5: 2, E5: 3, F5: 4, G5: 5, A5: 6, B5: 7, C6: 8, D6: 9, E6: 0,
+    //}
+    
+    var cmajNotes = ['C5', 'Csharp5', 'D5', 'Eflat5', 'E5', 'F5', ]
+    
+    alert(cmajNotes);
 }
