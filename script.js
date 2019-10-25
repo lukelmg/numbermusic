@@ -2,7 +2,7 @@ var input = document.getElementById("mainInput");
 input.focus();
 input.select();
 
-var timeBetween = 10;
+var timeBetween = 1;
 var noteDuration = 250;
 
 var A = document.getElementById("pianoA");
@@ -38,7 +38,7 @@ function getNumber() {
       lengthcount = lengthcount + 1;
 
       console.log("Test");
-    }, timeBetween * i);
+    }, (timeBetween + noteDuration) * i);
 
     if (i == length - 1) {
       i = 0;
