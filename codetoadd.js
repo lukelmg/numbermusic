@@ -8,7 +8,7 @@ function letterValue(str){
 
 
 
-var cmajNotes = ['C5', 'Csharp5', '' ]
+var cmajNotes = ['C5', 'Csharp5', 'D5', 'Eflat5', 'E5', 'F5', ]
 
 
 //Should allow me to set each note to a different variable depending on the scale that is being played
