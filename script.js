@@ -2,7 +2,7 @@ var input = document.getElementById("mainInput");
 input.focus();
 input.select();
 
-var timeBetween = 400;
+var timeBetween = 325;
 
 var A = document.getElementById("pianoA");
 var B = document.getElementById("pianoB");
@@ -63,37 +63,98 @@ var frequency = 440.0
 var o = context.createOscillator()
 
 var noteToPlay = {
-  A: function() {
-    A.play();
-    
-    /*
-    o.type = "sine"
-    o.connect(context.destination)
-    o.frequency.value = frequency
-    o.start()
-    sleep(500);
-    o.stop()
-    */
-    
+  A4: function() {
+   // A.play();
+    playNote(1000, 1000)
+  },
+  B4: function() {
+
+  },
+  C4: function() {
     
   },
-  B: function() {
-    B.play();
+  D4: function() {
+   
   },
-  C: function() {
-    C.play();
+  E4: function() {
+    
   },
-  D: function() {
-    D.play();
+  F4: function() {
+    
   },
-  E: function() {
-    E.play();
+  G4: function() {
+   
   },
-  F: function() {
-    F.play();
+  
+  
+  A5: function() {
+    
   },
-  G: function() {
-    G.play();
+  B5: function() {
+
+  },
+  C5: function() {
+    
+  },
+  D5: function() {
+   
+  },
+  E5: function() {
+    
+  },
+  F5: function() {
+    
+  },
+  G5: function() {
+   
+  },
+  
+  
+  
+  A6: function() {
+    
+  },
+  B6: function() {
+
+  },
+  C6: function() {
+    
+  },
+  D6: function() {
+   
+  },
+  E6: function() {
+    
+  },
+  F6: function() {
+    
+  },
+  G6: function() {
+   
+  },
+  
+  
+  
+  A7: function() {
+    
+  },
+  B7: function() {
+
+  },
+  C7: function() {
+    
+  },
+  D7: function() {
+   
+  },
+  E7: function() {
+    
+  },
+  F7: function() {
+    
+  },
+  G7: function() {
+   
   }
 };
 
@@ -142,4 +203,24 @@ function sleep(milliseconds) {
       break;
     }
   }
+}
+
+
+
+
+var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+
+function playNote(frequency, duration) {
+  // create Oscillator node
+  var oscillator = audioCtx.createOscillator();
+
+  oscillator.type = 'square';
+  oscillator.frequency.value = frequency; // value in hertz
+  oscillator.connect(audioCtx.destination);
+  oscillator.start();
+
+  setTimeout(
+    function() {
+      oscillator.stop();
+    }, duration);
 }
