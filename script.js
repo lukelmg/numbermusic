@@ -56,101 +56,44 @@ var context = new AudioContext();
 var o = context.createOscillator();
 
 var noteToPlay = {
-  A4: function() {
+  C5: function() {
     // A.play();
-    playNote(440.00, noteDuration);
-  },
-  B4: function() {
-    playNote(493.88, noteDuration);
-  },
-  C4: function() {
     playNote(523.25, noteDuration);
   },
-  D4: function() {
-    playNote(587.33, noteDuration);
-  },
-  E4: function() {
-    playNote(659.25, noteDuration);
-  },
-  F4: function() {
-    playNote(698.46, noteDuration);
-  },
-  G4: function() {
-    playNote(783.99, noteDuration);
-  },
-
-  
-  
-  
-  A5: function() {
-    playNote(880.00, noteDuration);
-  },
-  B5: function() {
-    playNote(987.77, noteDuration);
-  },
-  C5: function() {
-    playNote(1046.50, noteDuration);
+  Csharp5: function() {
+    playNote(554.37, noteDuration);
   },
   D5: function() {
-    playNote(1174.66, noteDuration);
+    playNote(587.33, noteDuration);
   },
-  E5: function() {
-    playNote(1318.51, noteDuration);
+  Eflat5: function  () {
+    playNote(622.25, noteDuration);
   },
-  F5: function() {
-    playNote(1396.91, noteDuration);
+  E5: function () {
+    playNote(659.25, noteDuration);
   },
-  G5: function() {
-    playNote(1567.98, noteDuration);
+  F5: function  () {
+    playNote(698.46, noteDuration);
   },
-
-  
-  
-  A6: function() {
-    playNote(1760.00, noteDuration);
+  Fsharp5: function () {
+    playNote(739.99, noteDuration);
   },
-  B6: function() {
-    playNote(1975.53, noteDuration);
+  G5: function  () {
+    playNote(783.99, noteDuration);
   },
-  C6: function() {
-    playNote(2093.00, noteDuration);
+  Gsharp5: function () {
+    playNote(830.61, noteDuration);
   },
-  D6: function() {
-    playNote(1174.66, noteDuration);
+  A5: function () {
+    playNote(880.00, noteDuration);
   },
-  E6: function() {
-    playNote(1318.51, noteDuration);
+  Bflat5: function() {
+    playNote(932.33, noteDuration);
   },
-  F6: function() {
-    playNote(1396.91, noteDuration);
-  },
-  G6: function() {
-    playNote(1567.98, noteDuration);
-  },
-
-  
-  
-  A7: function() {
-    playNote(1000, noteDuration);
-  },
-  B7: function() {
-    playNote(1000, noteDuration);
-  },
-  C7: function() {
-    playNote(1000, noteDuration);
-  },
-  D7: function() {
-    playNote(1000, noteDuration);
-  },
-  E7: function() {
-    playNote(1000, noteDuration);
-  },
-  F7: function() {
-    playNote(1000, noteDuration);
-  },
-  G7: function() {
-    playNote(1000, noteDuration);
+  B5: function () {
+    playNote(987.77, noteDuration);
   }
+ 
 };
 
 function detectNote1() {
