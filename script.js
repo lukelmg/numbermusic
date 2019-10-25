@@ -33,7 +33,7 @@ function getNumber() {
       note1 = output[length - length + lengthcount];
       detectNote1();
 
-      noteToPlay[letterNote + "4"]();
+      noteToPlay[letterNote]();
 
       lengthcount = lengthcount + 1;
 
@@ -57,7 +57,6 @@ var o = context.createOscillator();
 
 var noteToPlay = {
   C5: function() {
-    // A.play();
     playNote(523.25, noteDuration);
   },
   Csharp5: function() {
@@ -92,31 +91,81 @@ var noteToPlay = {
   },
   B5: function () {
     playNote(987.77, noteDuration);
+  },
+  
+  
+  C6: function() {
+    playNote(1046.50, noteDuration);
+  },
+  Csharp6: function() {
+    playNote(1108.73, noteDuration);
+  },
+  D6: function() {
+    playNote(1174.66, noteDuration);
+  },
+  Eflat6: function  () {
+    playNote(1244.51, noteDuration);
+  },
+  E6: function () {
+    playNote(1318.51, noteDuration);
+  },
+  F6: function  () {
+    playNote(1396.91, noteDuration);
+  },
+  Fsharp6: function () {
+    playNote(1479.98, noteDuration);
+  },
+  G6: function  () {
+    playNote(1567.98, noteDuration);
+  },
+  Gsharp6: function () {
+    playNote(1661.22, noteDuration);
+  },
+  A6: function () {
+    playNote(1760.00, noteDuration);
+  },
+  Bflat6: function() {
+    playNote(1864.66, noteDuration);
+  },
+  B6: function () {
+    playNote(1975.53, noteDuration);
   }
  
 };
 
 function detectNote1() {
-  if (note1 == 1 || note1 == 8) {
-    letterNote = "A";
+  if (note1 == 1) {
+    letterNote = "C5";
   } else {
-    if (note1 == 2 || note1 == 9) {
-      letterNote = "B";
+    if (note1 == 2) {
+      letterNote = "D5";
     } else {
-      if (note1 == 3 || note1 == 0) {
-        letterNote = "C";
+      if (note1 == 3) {
+        letterNote = "E5";
       } else {
         if (note1 == 4) {
-          letterNote = "D";
+          letterNote = "F5";
         } else {
           if (note1 == 5) {
-            letterNote = "E";
+            letterNote = "G5";
           } else {
             if (note1 == 6) {
-              letterNote = "F";
+              letterNote = "A5";
             } else {
               if (note1 == 7) {
-                letterNote = "G";
+                letterNote = "B5";
+              } else {
+                if (note1 == 8) {
+                  letterNote = "C6";
+                } else {
+                  if (note1 == 9) {
+                    letterNote = "D6"; 
+                  } else {
+                    if (note1 == 0) {
+                      letterNote = "E6"
+                    }
+                  }
+                }
               }
             }
           }
