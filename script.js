@@ -56,6 +56,11 @@ var context = new AudioContext();
 var o = context.createOscillator();
 
 var noteToPlay = {
+  
+  pause: function() {
+    playNote(99999999, noteDuration);
+  },
+  
   C5: function() {
     playNote(523.25, noteDuration);
   },
@@ -207,6 +212,10 @@ function cmajor() {
                   } else {
                     if (note1 == 0) {
                       letterNote = "E6"
+                    } else {
+                      if (note1 == '-') {
+                        letterNote = "pause";
+                      }
                     }
                   }
                 }
