@@ -245,7 +245,7 @@ function cmajor() {
                   } else {
                     if (note1 == 0) {
                       letterNote = "E6"
-                    }
+                    } 
                   }
                 }
               }
