@@ -75,7 +75,11 @@ var Eflat6 = Eflat5;
 var E6 = E5 * 2;
 var F6 = F5 * 2;
 var Fsharp6 = Fsharp5 * 2;
-var G6 = G5 * 2
+var G6 = G5 * 2;
+var Gsharp6 = Gsharp5 * 2;
+var A6 = A5 * 2;
+var Bflat6 = Bflat5 * 2;
+var B6 = B5 * 2;
 
 
 
@@ -87,78 +91,78 @@ var noteToPlay = {
   },
   
   C5: function() {
-    playNote(523.25, noteDuration);
+    playNote(C5, noteDuration);
   },
   Csharp5: function() {
-    playNote(554.37, noteDuration);
+    playNote(Csharp5, noteDuration);
   },
   D5: function() {
-    playNote(587.33, noteDuration);
+    playNote(D5, noteDuration);
   },
   Eflat5: function  () {
-    playNote(622.25, noteDuration);
+    playNote(Eflat5, noteDuration);
   },
   E5: function () {
-    playNote(659.25, noteDuration);
+    playNote(E5, noteDuration);
   },
   F5: function  () {
-    playNote(698.46, noteDuration);
+    playNote(F5, noteDuration);
   },
   Fsharp5: function () {
-    playNote(739.99, noteDuration);
+    playNote(Fsharp5, noteDuration);
   },
   G5: function  () {
-    playNote(783.99, noteDuration);
+    playNote(G5, noteDuration);
   },
   Gsharp5: function () {
-    playNote(830.61, noteDuration);
+    playNote(Gsharp5, noteDuration);
   },
   A5: function () {
-    playNote(880.00, noteDuration);
+    playNote(A5, noteDuration);
   },
   Bflat5: function() {
-    playNote(932.33, noteDuration);
+    playNote(Bflat5, noteDuration);
   },
   B5: function () {
-    playNote(987.77, noteDuration);
+    playNote(B5, noteDuration);
   },
   
   
   C6: function() {
-    playNote(1046.50, noteDuration);
+    playNote(C6, noteDuration);
   },
   Csharp6: function() {
-    playNote(1108.73, noteDuration);
+    playNote(Csharp6, noteDuration);
   },
   D6: function() {
-    playNote(1174.66, noteDuration);
+    playNote(D6, noteDuration);
   },
   Eflat6: function  () {
-    playNote(1244.51, noteDuration);
+    playNote(Eflat6, noteDuration);
   },
   E6: function () {
-    playNote(1318.51, noteDuration);
+    playNote(E6, noteDuration);
   },
   F6: function  () {
-    playNote(1396.91, noteDuration);
+    playNote(F6, noteDuration);
   },
   Fsharp6: function () {
-    playNote(1479.98, noteDuration);
+    playNote(Fsharp6, noteDuration);
   },
   G6: function  () {
-    playNote(1567.98, noteDuration);
+    playNote(G6, noteDuration);
   },
   Gsharp6: function () {
-    playNote(1661.22, noteDuration);
+    playNote(Gsharp6, noteDuration);
   },
   A6: function () {
-    playNote(1760.00, noteDuration);
+    playNote(A6, noteDuration);
   },
   Bflat6: function() {
-    playNote(1864.66, noteDuration);
+    playNote(Bflat6, noteDuration);
   },
   B6: function () {
-    playNote(1975.53, noteDuration);
+    playNote(B6, noteDuration);
   }
  
 };
@@ -241,10 +245,6 @@ function cmajor() {
                   } else {
                     if (note1 == 0) {
                       letterNote = "E6"
-                    } else {
-                      if (note1 == '-') {
-                        letterNote = "pause";
-                      }
                     }
                   }
                 }
@@ -256,6 +256,50 @@ function cmajor() {
     }
   }
 }
+
+function dmajor() {
+  if (note1 == 1) {
+    letterNote = "D5";
+  } else {
+    if (note1 == 2) {
+      letterNote = "E5";
+    } else {
+      if (note1 == 3) {
+        letterNote = "Fsharp5";
+      } else {
+        if (note1 == 4) {
+          letterNote = "G5";
+        } else {
+          if (note1 == 5) {
+            letterNote = "A5";
+          } else {
+            if (note1 == 6) {
+              letterNote = "B5";
+            } else {
+              if (note1 == 7) {
+                letterNote = "Csharp5";
+              } else {
+                if (note1 == 8) {
+                  letterNote = "D6";
+                } else {
+                  if (note1 == 9) {
+                    letterNote = "E6"; 
+                  } else {
+                    if (note1 == 0) {
+                      letterNote = "Fsharp6"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 $(document).on("keypress", function(e) {
   if (e.which == 13) {
