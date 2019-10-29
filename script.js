@@ -55,6 +55,31 @@ var frequency = 440.0;
 var context = new AudioContext();
 var o = context.createOscillator();
 
+var C5 = 523;
+var Csharp5 = 554;
+var D5 = 587;
+var Eflat5 = 622;
+var E5 = 659;
+var F5 = 698;
+var Fsharp5= 739;
+var G5 = 783.99;
+var Gsharp5 = 830.61;
+var A5 = 880;
+var Bflat5 = 932;
+var B5 = 987;
+
+var C6 = C5 * 2;
+var Csharp6 = Csharp5 * 2;
+var D6 = D5 * 2;
+var Eflat6 = Eflat5;
+var E6 = E5 * 2;
+var F6 = F5 * 2;
+var Fsharp6 = Fsharp5 * 2;
+var G6 = G5 * 2
+
+
+
+
 var noteToPlay = {
   
   pause: function() {
