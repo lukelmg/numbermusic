@@ -58,7 +58,7 @@ var o = context.createOscillator();
 var noteToPlay = {
   
   pause: function() {
-    playNote(99999999, noteDuration);
+    playNote(0, noteDuration);
   },
   
   C5: function() {
@@ -168,6 +168,10 @@ function detectNote1() {
                   } else {
                     if (note1 == 0) {
                       letterNote = "E6"
+                    } else {
+                      if (note1 == "-") {
+                        letterNote = "pause";
+                      }
                     }
                   }
                 }
