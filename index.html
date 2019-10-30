@@ -19,24 +19,33 @@
   <body>
     <h1>Numbers to Music</h1>
     <p class="main">Copyright &copy Luke Gutman, 2019</p>
-    <input id="mainInput" type="number" placeholder="Type Numbers Here"><br><br>
+    <input id="mainInput" placeholder="Type Numbers Here"><br><br>
     <button onclick="getNumber();">Submit</button>
        <br><br> <span>Note:</span><span id="output"></span>
     
-    
     <h2>Major Scales</h2>
-    <button id="Cmaj">C Major</button>
-    <button id="Dmaj">D Major</button>
-    <button id="Emaj">E Major</button>
-    <button id="Fmaj">F Major</button>
-    <button id="Gmaj">G Major</button>
-    <button id="Amaj">A Major</button>
-    <button id="Bmaj">B Major</button>
-    <button id="C#maj">C# Major</button>
-    <button id="D#maj">D# Major</button>
-    <button id="F#maj">F# Major</button>
-    <button id="G#maj">G# Major</button>
-    <button id="A#maj">A# Major</button>
+    
+    
+    <select id="testSelect" onclick="testSelect()">
+      <option>test1</option>
+      <option>test2</option>
+      <option>test3</option>
+    </select>
+    
+    <select id="scales" onchange="readSelect()">
+      <option id="Cmaj">C Major</option>
+      <option id="Dmaj">D Major</option>
+      <option id="Emaj">E Major</option>
+      <option id="Fmaj">F Major</option>
+      <option id="Gmaj">G Major</option>
+      <option id="Amaj">A Major</option>
+      <option id="Bmaj">B Major</option>
+      <option id="C#maj">C# Major</option>
+      <option id="D#maj">D# Major</option>
+      <option id="F#maj">F# Major</option>
+      <option id="G#maj">G# Major</option>
+      <option id="A#maj">A# Major</option>
+    </select>
     
     <h2>Jazz Scales</h2>
     <button id="Gblue">G Blues</button>
