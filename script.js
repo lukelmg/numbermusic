@@ -307,6 +307,95 @@ function dmajor() {
   }
 }
 
+function emajor() {
+  if (note1 == 1) {
+    letterNote = "E5";
+  } else {
+    if (note1 == 2) {
+      letterNote = "Fsharp5";
+    } else {
+      if (note1 == 3) {
+        letterNote = "Gsharp5";
+      } else {
+        if (note1 == 4) {
+          letterNote = "A5";
+        } else {
+          if (note1 == 5) {
+            letterNote = "B5";
+          } else {
+            if (note1 == 6) {
+              letterNote = "Csharp6";
+            } else {
+              if (note1 == 7) {
+                letterNote = "Eflat6";
+              } else {
+                if (note1 == 8) {
+                  letterNote = "E6";
+                } else {
+                  if (note1 == 9) {
+                    letterNote = "Fsharp6"; 
+                  } else {
+                    if (note1 == 0) {
+                      letterNote = "Gsharp6"
+                    } else {
+                      letterNote = "pause";
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+function fmajor() {
+  if (note1 == 1) {
+    letterNote = "F5";
+  } else {
+    if (note1 == 2) {
+      letterNote = "G5";
+    } else {
+      if (note1 == 3) {
+        letterNote = "A5";
+      } else {
+        if (note1 == 4) {
+          letterNote = "Bflat5";
+        } else {
+          if (note1 == 5) {
+            letterNote = "C6";
+          } else {
+            if (note1 == 6) {
+              letterNote = "D6";
+            } else {
+              if (note1 == 7) {
+                letterNote = "E6";
+              } else {
+                if (note1 == 8) {
+                  letterNote = "F6";
+                } else {
+                  if (note1 == 9) {
+                    letterNote = "G6"; 
+                  } else {
+                    if (note1 == 0) {
+                      letterNote = "A6"
+                    } else {
+                      letterNote = "pause";
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 
 
 $(document).on("keypress", function(e) {
@@ -366,5 +455,11 @@ function readSelect() {
 function convertSelectToFunctions() {
   if (readFromSelect == "C Major") {
     cmajor();
-  } else if (readFromSelect =)
+  } else if (readFromSelect == "D Major") {
+    dmajor();
+  } else if (readFromSelect == "E Major") {
+    emajor();
+  } else if (readFromSelect == "F Major") {
+    fmajor();
+  }
 }
