@@ -19,8 +19,10 @@ var lengthcount = 0;
 
 var letterNote = "A";
 
+var mynumber;
+
 function getNumber() {
-  var mynumber = document.getElementById("mainInput").value; //get number of input
+   mynumber = document.getElementById("mainInput").value; //get number of input
   var length = mynumber.toString().length; //calculate length of input
 
   var number = mynumber,
@@ -31,7 +33,7 @@ function getNumber() {
     setTimeout(function() {
       output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
       note1 = output[length - length + lengthcount];
-      detectNote1();
+      dmajor();
 
       noteToPlay[letterNote]();
 
@@ -81,13 +83,13 @@ var A6 = A5 * 2;
 var Bflat6 = Bflat5 * 2;
 var B6 = B5 * 2;
 
-
+var nanValue = NaN;
 
 
 var noteToPlay = {
   
   pause: function() {
-    playNote(0, noteDuration);
+    playNote(1, noteDuration);
   },
   
   C5: function() {
@@ -198,9 +200,11 @@ function detectNote1() {
                     if (note1 == 0) {
                       letterNote = "E6"
                     } else {
-                      if (note1 == "-") {
+                     
+                    
                         letterNote = "pause";
-                      }
+                        
+                      
                     }
                   }
                 }
@@ -277,7 +281,7 @@ function dmajor() {
               letterNote = "B5";
             } else {
               if (note1 == 7) {
-                letterNote = "Csharp5";
+                letterNote = "Csharp6";
               } else {
                 if (note1 == 8) {
                   letterNote = "D6";
