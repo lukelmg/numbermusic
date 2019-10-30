@@ -356,7 +356,7 @@ function letterValue(str){
 var selectedScale  = "cmajor";
 
 
-var readFromSelect;
+var readFromSelect  = "C Major";
 
 function readSelect() {
    readFromSelect = document.getElementById("scales").value;
@@ -366,9 +366,5 @@ function readSelect() {
 function convertSelectToFunctions() {
   if (readFromSelect == "C Major") {
     cmajor();
-  } else {
-    if (readFromSelect == "D Major") {
-      dmajor();
-    }
-  }
+  } else if (readFromSelect =)
 }
