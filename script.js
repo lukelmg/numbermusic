@@ -33,7 +33,14 @@ function getNumber() {
     setTimeout(function() {
       output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
       note1 = output[length - length + lengthcount];
-      dmajor();
+      if (selectedScale = "cmajor") {
+        alert("c");
+        cmajor();
+      } else {if (selectedScale = "dmajor") {
+        alert("d");
+        dmajor();
+      }
+      }
 
       noteToPlay[letterNote]();
 
@@ -249,7 +256,9 @@ function cmajor() {
                   } else {
                     if (note1 == 0) {
                       letterNote = "E6"
-                    } 
+                    }  else {
+                      letterNote = "pause";
+                    }
                   }
                 }
               }
@@ -291,6 +300,8 @@ function dmajor() {
                   } else {
                     if (note1 == 0) {
                       letterNote = "Fsharp6"
+                    } else {
+                      letterNote = "pause";
                     }
                   }
                 }
@@ -346,3 +357,10 @@ function letterValue(str){
     
     alert(cmajNotes);
 }
+
+
+
+var selectedScale  = "cmajor";
+
+function selectScaleCmaj() {selectedScale = "cmajor"}
+function selectScaleDmaj() {selectedScale = "dmajor"}
