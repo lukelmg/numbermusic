@@ -33,14 +33,7 @@ function getNumber() {
     setTimeout(function() {
       output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
       note1 = output[length - length + lengthcount];
-      if (selectedScale = "cmajor") {
-        alert("c");
-        cmajor();
-      } else {if (selectedScale = "dmajor") {
-        alert("d");
-        dmajor();
-      }
-      }
+      myscale[selectedScale]();
 
       noteToPlay[letterNote]();
 
@@ -362,5 +355,9 @@ function letterValue(str){
 
 var selectedScale  = "cmajor";
 
-function selectScaleCmaj() {selectedScale = "cmajor"}
-function selectScaleDmaj() {selectedScale = "dmajor"}
+
+var myscale = {
+    
+    cmajor: function() {selectedScale = "cmajor"},
+    dmajor: function() {selectedScale = "dmajor"}
+}
