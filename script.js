@@ -348,7 +348,7 @@ function letterValue(str){
     
     var cmajNotes = ['C5', 'Csharp5', 'D5', 'Eflat5', 'E5', 'F5', ]
     
-    alert(cmajNotes);
+    //alert(cmajNotes);
 }
 
 
@@ -356,7 +356,15 @@ function letterValue(str){
 var selectedScale  = "cmajor";
 
 
-var myscale = {
-    cmajor: function() {selectedScale = "cmajor"},
-    dmajor: function() {selectedScale = "dmajor"}
+function readSelect() {
+  var test = document.getElementById("scales");
+ 
+  alert(test);
+}
+
+
+
+function testSelect() {
+  var test2 = document.getElementById("testSelect");
+  alert(test2);
 }
