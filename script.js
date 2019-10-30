@@ -357,7 +357,6 @@ var selectedScale  = "cmajor";
 
 
 var myscale = {
-    
     cmajor: function() {selectedScale = "cmajor"},
     dmajor: function() {selectedScale = "dmajor"}
 }
