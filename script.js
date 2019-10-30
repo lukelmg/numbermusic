@@ -33,7 +33,7 @@ function getNumber() {
     setTimeout(function() {
       output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
       note1 = output[length - length + lengthcount];
-      myscale[selectedScale]();
+      convertSelectToFunctions();
 
       noteToPlay[letterNote]();
 
@@ -356,15 +356,19 @@ function letterValue(str){
 var selectedScale  = "cmajor";
 
 
+var readFromSelect;
+
 function readSelect() {
-  var test = document.getElementById("scales");
- 
-  alert(test);
+   readFromSelect = document.getElementById("scales").value;
 }
 
 
-
-function testSelect() {
-  var test2 = document.getElementById("testSelect");
-  alert(test2);
+function convertSelectToFunctions() {
+  if (readFromSelect == "C Major") {
+    cmajor();
+  } else {
+    if (readFromSelect == "D Major") {
+      dmajor();
+    }
+  }
 }
