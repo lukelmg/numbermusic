@@ -57,23 +57,23 @@ var frequency = 440.0;
 var context = new AudioContext();
 var o = context.createOscillator();
 
-var C5 = 523;
-var Csharp5 = 554;
-var D5 = 587;
-var Eflat5 = 622;
-var E5 = 659;
-var F5 = 698;
-var Fsharp5 = 739;
-var G5 = 783.99;
-var Gsharp5 = 830.61;
-var A5 = 880;
-var Bflat5 = 932;
-var B5 = 987;
+var C5 = 261.63;
+var Csharp5 = 277.18;
+var D5 = 293.66;
+var Eflat5 = 311.13;
+var E5 = 329.63;
+var F5 = 349.23;
+var Fsharp5 = 369.99;
+var G5 = 392.00;
+var Gsharp5 = 415.30;
+var A5 = 440.00;
+var Bflat5 = 466.16;
+var B5 = 493.88;
 
 var C6 = C5 * 2;
 var Csharp6 = Csharp5 * 2;
 var D6 = D5 * 2;
-var Eflat6 = Eflat5;
+var Eflat6 = Eflat5 * 2;
 var E6 = E5 * 2;
 var F6 = F5 * 2;
 var Fsharp6 = Fsharp5 * 2;
@@ -397,27 +397,27 @@ function gmajor() {
 }
 
 
-function amajor() {
+function cmajorblue() {
   if (note1 == 1) {
-    letterNote = "A5";
+    letterNote = "C5";
   } else if (note1 == 2) {
-    letterNote = "B5";
+    letterNote = "Eflat5";
   } else if (note1 == 3) {
-    letterNote = "Csharp5";
+    letterNote = "F5";
   } else if (note1 == 4) {
-    letterNote = "D6";
+    letterNote = "Fsharp5";
   } else if (note1 == 5) {
-    letterNote = "E6";
+    letterNote = "G5";
   } else if (note1 == 6) {
-    letterNote = "Fsharp6";
+    letterNote = "Bflat5";
   } else if (note1 == 7) {
-    letterNote = "Gsharp6";
-  } else if (note1 == 8) {
-    letterNote = "A6";
-  } else if (note1 == 9) {
-    letterNote = "B6";
-  } else if (note1 == 0) {
     letterNote = "C6";
+  } else if (note1 == 8) {
+    letterNote = "Eflat6";
+  } else if (note1 == 9) {
+    letterNote = "F6";
+  } else if (note1 == 0) {
+    letterNote = "Fsharp6";
   } else {
     letterNote = "pause";
   }
@@ -484,5 +484,7 @@ function convertSelectToFunctions() {
     fmajor();
   } else if (readFromSelect == "G Major") {
     gmajor();
+  } else if (readFromSelect == "C Major Blues") {
+    cmajorblue();
   }
 }
