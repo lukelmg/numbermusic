@@ -13,8 +13,7 @@ h1 {
   color: black;
   font-size: 4em;
   margin-bottom: 0;
-  font-family: 'Quicksand', sans-serif;
-  font-weigth: 0;
+  font-family: 'Raleway', sans-serif;
 }
 
 h2 {
@@ -28,11 +27,12 @@ h2 {
 
 .main {
   margin-top:5px;
-  font-weigth:bold;
+  font-weigth:300;
   font-size: 1.5em;
   color: white;
   font-style:italic;
   width: 30vw;
+  font-family: 'Raleway', sans-serif;
 }
 
 #mainInput {
