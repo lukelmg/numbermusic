@@ -6,17 +6,19 @@ body {
 }
 
 body {
-  background-color:#26547C;
+  background-color:#white;
 }
 
 h1 {
-  color: #FFD166;
+  color: black;
   font-size: 4em;
   margin-bottom: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-weigth: 0;
 }
 
 h2 {
-  color:white;
+  color:black;
   font-size: 2em;
   font-family:Arial;
   font-weight:bold;
@@ -34,20 +36,41 @@ h2 {
 }
 
 #mainInput {
-  background-color: #10c495;
-  color: white;
+  background-color: #gray;
+  color: black;
   border:none;
   width: 50vw;
   height: 5vh;
   font-size: 2em;
   padding: 1%;
+  border: 1px solid gray;
 }
 
-#mainInput:focus {
-  outline:none;
-}
+#mainInput:focus { color: black; outline:none; }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #42dbb3;
+  color: #gray;
   opacity: 1; /* Firefox */
 }
+
+
+#submitButton {
+  background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  height: 7vh;
+  width:20vh;
+}
+
+#scales {
+  background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  height: 7vh;
+  width:20vh;
+}
+
