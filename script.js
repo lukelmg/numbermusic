@@ -22,6 +22,13 @@ var letterNote = "A";
 var mynumber;
 
 function getNumber() {
+  
+  //alert(readFromSelect);
+  if (readFromSelect == "Select a Scale") {
+    alert("Please select a scale");
+  } else {
+  
+  
   mynumber = document.getElementById("mainInput").value; //get number of input
   var length = mynumber.toString().length; //calculate length of input
 
@@ -30,7 +37,7 @@ function getNumber() {
     sNumber = number.toString();
 
   for (var i = 0; i < length; i++) {
-    setTimeout(function() {
+     setTimeout(function() {
       output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
       note1 = output[length - length + lengthcount];
       convertSelectToFunctions();
@@ -51,6 +58,7 @@ function getNumber() {
 
       break;
     }
+  }
   }
 }
 var frequency = 440.0;
@@ -465,9 +473,9 @@ function letterValue(str) {
   //alert(cmajNotes);
 }
 
-var selectedScale = "cmajor";
+var selectedScale = "Select a Scale";
 
-var readFromSelect = "C Major";
+var readFromSelect = "Select a Scale";
 
 function readSelect() {
   readFromSelect = document.getElementById("scales").value;
