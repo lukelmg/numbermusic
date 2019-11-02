@@ -13,7 +13,7 @@ h1 {
   color: black;
   font-size: 5vh;
   margin-bottom: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
@@ -21,6 +21,7 @@ h2 {
   font-size: 2em;
   font-family:Arial;
   font-weight:bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 .input
@@ -32,7 +33,7 @@ h2 {
   color: white;
   font-style:italic;
   width: 30vw;
-  font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 #mainInput {
@@ -44,7 +45,7 @@ h2 {
   font-size: 4vh;
   padding: 1%;
   border: 1px solid gray;
-   font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 #mainInput:focus { color: black; outline:none; }

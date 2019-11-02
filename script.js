@@ -479,9 +479,6 @@ var readFromSelect = "Select a Scale";
 
 function readSelect() {
   readFromSelect = document.getElementById("scales").value;
-  if (readFromSelect == "Select a Scale") {
-    alert("Please select a scale");
-  }
 }
 
 function convertSelectToFunctions() {
