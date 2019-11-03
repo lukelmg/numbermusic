@@ -496,3 +496,11 @@ function convertSelectToFunctions() {
     cmajorblue();
   }
 }
+
+
+
+function readTempo() {
+  var tempo = document.getElementById("tempoSlider").value;
+  document.getElementById("tempoOutput").innerHTML = "Tempo: " + tempo + " BPM";
+  
+}
