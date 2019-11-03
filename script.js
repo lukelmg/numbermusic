@@ -4,6 +4,9 @@ input.select();
 
 var timeBetween = 10;
 var noteDuration = 250;
+var tempo = 120;
+
+var tempoToMil = (60 / tempo) * 1000;
 
 var A = document.getElementById("pianoA");
 var B = document.getElementById("pianoB");
@@ -508,13 +511,20 @@ function readTempo() {
 }
 
 function readArt() {
-  var articulation = document.getElementById("artSlider").value;
-  var output = "&#119163;"
+  var articulation = document.getElementById("articulationSlider").value;
+  var output = "&#119186;"
   if (articulation == 1) {
-    output = "stat";
+    output = "Stacato";
+    timeBetween = noteDuration * 2;
   } else if (articulation == 2) {
-    output = "marc";
+    output = "Mardelato";
+    timeBetween = noteDuration * 1.5;
   } else if (articulation == 3) {
-    output = "&#119163;";
-  } else if ()
+    output = "Accent";
+    timeBetween = noteDuration * 1;
+  } else if (articulation == 4) {
+    output = "Legato";
+    timeBetween = noteDuration * .5;
+  }
+  document.getElementById("articulationOut").innerHTML = output;
 }

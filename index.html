@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/style.css">
     <script src="/script.js" defer></script>
   </head>  
-  <body onload="readTempo();">
+  <body onload="readTempo(); readArt();">
     <h1>Numbers to Music</h1>
     <p class="main">Copyright &copy Luke Gutman, 2019</p>
     
@@ -34,7 +34,7 @@
     <center><p class="main" id="articulationOut">
       Articulation: 
       </p></center>
-     <input type="range" min="10" max="240" value="120" class="slider" id="articulationSlider" oninput="readTempo();">
+     <input type="range" min="1" max="4" value="3" class="slider" id="articulationSlider" oninput="readArt();">
     </div>
     
     <br> <br>
