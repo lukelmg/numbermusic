@@ -1,4 +1,4 @@
-/* CSS files add styling rules to your content */
+
 
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
@@ -6,39 +6,151 @@ body {
 }
 
 body {
-  background-color:#26547C;
+  background-color:#white;
 }
 
 h1 {
-  color: #FFD166;
-  font-size: 4em;
+  color: black;
+  font-size: 5vh;
   margin-bottom: 0;
+  font-family: 'Roboto', sans-serif;
 }
+
+h2 {
+  color:black;
+  font-size: 2em;
+  font-family:Arial;
+  font-weight:bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input
 
 .main {
   margin-top:5px;
-  font-weigth:bold;
-  font-size: 1.5em;
+  font-weigth:300;
+  font-size: 3vh;
   color: white;
   font-style:italic;
   width: 30vw;
+font-family: 'Roboto', sans-serif;
 }
 
 #mainInput {
-  background-color: #10c495;
-  color: white;
+  background-color: #gray;
+  color: black;
   border:none;
-  width: 50vw;
+  width: 85vw;
   height: 5vh;
-  font-size: 2em;
+  font-size: 4vh;
   padding: 1%;
+  border: 1px solid gray;
+  font-family: 'Roboto', sans-serif;
 }
 
-#mainInput:focus {
+#mainInput:focus { color: black; outline:none; }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #gray;
+  opacity: 1; /* Firefox */
+}
+
+
+#submitButton {
+  background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  height: 7vh;
+  width:20vh;
+  transition: .2s ease-in;
+   cursor: pointer;
+  margin-left: 1vw;
+}
+
+#submitButton:hover {
+  background-color:#E8E8E8;
+    color:gray;
+}
+
+#submitButton:after {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+
+#scales {
+  background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  height: 7vh;
+  width:20vh;
+  transition: .2s ease-in;
+  cursor: pointer;
+}
+
+
+#scales:hover {
+  background-color: #E8E8E8;
+  color:gray;
   outline:none;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #42dbb3;
-  opacity: 1; /* Firefox */
+#scales:focus {
+  outline:none;
+}
+
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 10vw;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: gray;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: gray;
+  cursor: pointer;
+}
+
+
+.sliderDiv {
+  color:gray;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 5px 7px 5px 5px;
+  width: 10vw;
+  display:inline-block;
+}
+
+
+#tempoOutput, #articulationOut {
+  color:gray;
+  font-size: 1vw;
+  font-weight:bold;
 }

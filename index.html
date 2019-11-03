@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
     <title>Hello!</title>
     <audio id="pianoA" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20A.wav?v=1571579863573"></audio>
     <audio id="pianoB" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20B.wav?v=1571579867423"></audio>
@@ -16,39 +18,37 @@
     <link rel="stylesheet" href="/style.css">
     <script src="/script.js" defer></script>
   </head>  
-  <body>
+  <body onload="readTempo(); readArt();">
     <h1>Numbers to Music</h1>
     <p class="main">Copyright &copy Luke Gutman, 2019</p>
+    
     <input id="mainInput" placeholder="Type Numbers Here"><br><br>
-    <button onclick="getNumber();">Submit</button>
-       <br><br> <span>Note:</span><span id="output"></span>
+   <div class="sliderDiv">
+    <center><p class="main" id="tempoOutput">
+      Tempo
+      </p></center>
+     <input type="range" min="10" max="240" value="120" class="slider" id="tempoSlider" oninput="readTempo();">
+    </div>
     
-    <h2>Major Scales</h2>
+     <div class="sliderDiv">
+    <center><p class="main" id="articulationOut">
+      Articulation: 
+      </p></center>
+     <input type="range" min="1" max="4" value="3" class="slider" id="articulationSlider" oninput="readArt();">
+    </div>
     
+    <br> <br>
     
-    <select id="testSelect" onclick="testSelect()">
-      <option>test1</option>
-      <option>test2</option>
-      <option>test3</option>
-    </select>
-    
-    <select id="scales" onchange="readSelect()">
+      <select id="scales" onchange="readSelect()">
+      <option style="font-weight:bold;" selected disabled>Select a Scale</option>
       <option id="Cmaj">C Major</option>
       <option id="Dmaj">D Major</option>
       <option id="Emaj">E Major</option>
       <option id="Fmaj">F Major</option>
       <option id="Gmaj">G Major</option>
-      <option id="Amaj">A Major</option>
-      <option id="Bmaj">B Major</option>
-      <option id="C#maj">C# Major</option>
-      <option id="D#maj">D# Major</option>
-      <option id="F#maj">F# Major</option>
-      <option id="G#maj">G# Major</option>
-      <option id="A#maj">A# Major</option>
+      <option id="Amaj">C Major Blues</option>
     </select>
-    
-    <h2>Jazz Scales</h2>
-    <button id="Gblue">G Blues</button>
-    <button id="Cblue">C Blues</button>
+    <button id="submitButton" onclick="getNumber(); readSelect();">Play</button>
+       <br><br> <span>Note:</span><span id="output"></span>
   </body>
 </html>
