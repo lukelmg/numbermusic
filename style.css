@@ -145,4 +145,12 @@ font-family: 'Roboto', sans-serif;
   border: 1px solid gray;
   padding: 5px 7px 5px 5px;
   width: 10vw;
+  display:inline-block;
+}
+
+
+#tempoOutput, #articulationOut {
+  color:gray;
+  font-size: 1vw;
+  font-weight:bold;
 }

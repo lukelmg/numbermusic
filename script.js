@@ -499,10 +499,22 @@ function convertSelectToFunctions() {
 
 function readTempo() {
   var tempo = document.getElementById("tempoSlider").value;
-  document.getElementById("tempoOutput").innerHTML = "Tempo: " + tempo + " BPM";
+  document.getElementById("tempoOutput").innerHTML = "&#9833; = " + tempo + " BPM";
   
   var actualTiming = 60 / tempo;
   actualTiming = (actualTiming * 1000) / 2;
   noteDuration = actualTiming;
   
+}
+
+function readArt() {
+  var articulation = document.getElementById("artSlider").value;
+  var output = "&#119163;"
+  if (articulation == 1) {
+    output = "stat";
+  } else if (articulation == 2) {
+    output = "marc";
+  } else if (articulation == 3) {
+    output = "&#119163;";
+  } else if ()
 }
