@@ -64,11 +64,21 @@ font-family: 'Roboto', sans-serif;
   outline:none;
   height: 7vh;
   width:20vh;
+  transition: .2s ease-in;
+   cursor: pointer;
+  margin-left: 1vw;
 }
 
 #submitButton:hover {
-  background-color:black;
-    color:white;
+  background-color:#E8E8E8;
+    color:gray;
+}
+
+#submitButton:after {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
 
 
@@ -80,5 +90,27 @@ font-family: 'Roboto', sans-serif;
   outline:none;
   height: 7vh;
   width:20vh;
+  transition: .2s ease-in;
+  cursor: pointer;
 }
 
+
+#scales:hover {
+  background-color: #E8E8E8;
+  color:gray;
+  outline:none;
+}
+
+#scales:focus {
+  outline:none;
+}
+
+
+
+
+.sliderDiv {
+  background-color: white;
+  border: 1px black solid;
+  padding: 5px 5px 5px 5px;
+  width: 10vw;
+}

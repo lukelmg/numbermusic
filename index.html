@@ -21,7 +21,16 @@
   <body>
     <h1>Numbers to Music</h1>
     <p class="main">Copyright &copy Luke Gutman, 2019</p>
+    
     <input id="mainInput" placeholder="Type Numbers Here"><br><br>
+   <div class="sliderDiv">
+    <p class="main">
+      Tempo
+    </p>
+     <input type="range" min="10" max="240" value="120" class="slider" id="myRange">
+    </div>
+    <br> <br>
+    
       <select id="scales" onchange="readSelect()">
       <option style="font-weight:bold;" selected disabled>Select a Scale</option>
       <option id="Cmaj">C Major</option>
@@ -31,7 +40,7 @@
       <option id="Gmaj">G Major</option>
       <option id="Amaj">C Major Blues</option>
     </select>
-    <button id="submitButton" onclick="getNumber(); readSelect();">Submit</button>
+    <button id="submitButton" onclick="getNumber(); readSelect();">Play</button>
        <br><br> <span>Note:</span><span id="output"></span>
   </body>
 </html>
