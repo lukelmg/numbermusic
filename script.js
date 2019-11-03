@@ -46,7 +46,6 @@ function getNumber() {
 
       lengthcount = lengthcount + 1;
 
-      console.log("Test");
     }, (timeBetween + noteDuration) * i);
 
     if (i == length - 1) {
@@ -55,7 +54,6 @@ function getNumber() {
       length = "";
       number = "";
       lengthcount = 0;
-
       break;
     }
   }
@@ -502,5 +500,9 @@ function convertSelectToFunctions() {
 function readTempo() {
   var tempo = document.getElementById("tempoSlider").value;
   document.getElementById("tempoOutput").innerHTML = "Tempo: " + tempo + " BPM";
+  
+  var actualTiming = 60 / tempo;
+  actualTiming = (actualTiming * 1000) / 2;
+  noteDuration = actualTiming;
   
 }
