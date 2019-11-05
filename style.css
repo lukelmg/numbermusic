@@ -63,10 +63,10 @@ font-family: 'Roboto', sans-serif;
   font-family:arial;
   outline:none;
   height: 7vh;
-  width:7vw;
+  width:11vw;
   transition: .2s ease-in;
    cursor: pointer;
-  margin-left: 1vw;
+  margin-left: .8vw;
 }
 
 #submitButton:hover {
@@ -89,7 +89,7 @@ font-family: 'Roboto', sans-serif;
   font-family:arial;
   outline:none;
   height: 7vh;
-  width: 7vw;
+  width: 11vw;
   transition: .2s ease-in;
   cursor: pointer;
   
@@ -111,7 +111,7 @@ font-family: 'Roboto', sans-serif;
 .slider {
   -webkit-appearance: none;
   width: 10vw;
-  height: 25px;
+  height: 2vw;
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
@@ -130,6 +130,7 @@ font-family: 'Roboto', sans-serif;
   height: 25px;
   background: gray;
   cursor: pointer;
+
 }
 
 .slider::-moz-range-thumb {
@@ -146,25 +147,25 @@ font-family: 'Roboto', sans-serif;
   border: 1px solid gray;
   padding: 5px 7px 5px 5px;
   width: 10vw;
-  height: 5vw;
-    display:inline-block;
-    float:left;
+  height: 6vw;
+  display:inline-block;
+  float:left;
 }
 
 .accentDiv {
-    display:inline-block;
+  display:inline-block;
   color:gray;
   background-color: white;
   border: 1px solid gray;
   padding: 5px 7px 5px 5px;
   width: 10vw;
-  height: 5vw;
+  height: 6vw;
   margin-left: 1vw;
 }
 
 
 #tempoOutput, #articulationOut {
   color:gray;
-  font-size: 1vw;
+  font-size: 0.9vw;
   font-weight:bold;
 }
