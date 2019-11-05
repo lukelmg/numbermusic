@@ -30,7 +30,7 @@
      <input type="range" min="10" max="240" value="120" class="slider" id="tempoSlider" oninput="readTempo();">
     </div>
     
-     <div class="sliderDiv">
+     <div class="accentDiv">
     <center><p class="main" id="articulationOut">
       Articulation: 
       </p></center>
@@ -49,6 +49,47 @@
       <option id="Amaj">C Major Blues</option>
     </select>
     <button id="submitButton" onclick="getNumber(); readSelect();">Play</button>
-       <br><br> <span>Note:</span><span id="output"></span>
+       <br><br> <span></span><span id="output"></span>
+    
+    <table style="width: 11vw;   text-align: left; border: 1px solid gray;">
+  <tr>
+    <th>Note</th>
+    <th>Number</th> 
+  </tr>
+  <tr>
+    <td>C5</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td id="one">D5</td>
+    <td>2</td>
+  </tr><tr>
+    <td id="two">E5</td>
+    <td>3</td>
+  </tr><tr>
+    <td id="three">F5</td>
+    <td>4</td>
+  </tr>
+      <tr>
+    <td id="four">G5</td>
+    <td>5</td>
+  </tr><tr>
+    <td id="five">A5</td>
+    <td>6</td>
+  </tr><tr>
+    <td id="six">B5</td>
+    <td>7</td>
+  </tr><tr>
+    <td id="seven">C6</td>
+    <td>8</td>
+  </tr><tr>
+    <td id="one">D6</td>
+    <td>9</td>
+  </tr><tr>
+    <td id="one">E6</td>
+    <td>0</td>
+  </tr>
+    </table>
+    
   </body>
 </html>
