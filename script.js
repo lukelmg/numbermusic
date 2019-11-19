@@ -74,7 +74,7 @@ function getNumberNoSound() {
   } else {
   
   
-  mynumber = document.getElementById("mainInput").value; //get number of input
+  mynumber = 1234567890;
   var length = mynumber.toString().length; //calculate length of input
 
   var number = mynumber,
@@ -87,11 +87,23 @@ function getNumberNoSound() {
       note1 = output[length - length + lengthcount];
       convertSelectToFunctions();
 
-   
+      
       
       lengthcount = lengthcount + 1;
        
-       document.getElementById(lengthcount).innerHTML = letterNote;
+       var res = letterNote.replace("sharp", " #");
+       
+       res = res.replace("flat", "&#9837;");
+       
+       res = res.replace("5", "");
+       
+       res = res.replace("6", "");
+       
+       if (lengthcount == 10) {
+         lengthcount = 0;
+       }
+       
+       document.getElementById(lengthcount).innerHTML = res;
 
     }, (1) * i);
 
