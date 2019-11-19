@@ -4,13 +4,8 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
     <title>Hello!</title>
-    <audio id="pianoA" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20A.wav?v=1571579863573"></audio>
-    <audio id="pianoB" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20B.wav?v=1571579867423"></audio>
-    <audio id="pianoC" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20C.wav?v=1571579869671"></audio>
-    <audio id="pianoD" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20D.wav?v=1571579871425"></audio>
-    <audio id="pianoE" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20E.wav?v=1571579874241"></audio>
-    <audio id="pianoF" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20F.wav?v=1571579877306"></audio>
-    <audio id="pianoG" src="https://cdn.glitch.com/c24b38ca-ce97-4b5f-95b2-72e346b3fac0%2FPiano%20G.wav?v=1571579879154"></audio>
+     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +16,7 @@
   <body onload="readTempo(); readArt();">
     <h1>Numbers to Music</h1>
     <p class="main">Copyright &copy Luke Gutman, 2019</p>
-    
+    <button onclick="alertTest();">click to test</button>
     <input id="mainInput" placeholder="Type Numbers Here"><br><br>
    <div class="sliderDiv">
     <center><p class="main" id="tempoOutput">
@@ -51,42 +46,43 @@
     <button id="submitButton" onclick="getNumber(); readSelect();">Play</button>
        <br><br> <span></span><span id="output"></span>
     
-    <table style="width: 11vw;   text-align: left; border: 1px solid gray;">
+    <table style="text-align: left; border: 1px solid gray;">
+      <td colspan="2" id="mergedMiddle" align="center">Please Select a Scale</td>
   <tr>
-    <th>Note</th>
-    <th>Number</th> 
+    <th align="center">Note</th>
+    <th align="center">Number</th> 
   </tr>
-  <tr>
+  <tr align="center">
     <td id="1"> </td>
     <td>1</td>
-  </tr><tr>
+  </tr><tr align="center">
     <td id="2"> </td>
     <td>2</td>
-  </tr><tr>
+  </tr><tr align="center">
     <td id="3">  </td>
     <td>3</td>
   </tr>
-      <tr>
-    <td id="4">G5</td>
+      <tr align="center">
+    <td id="4"> </td>
     <td>4</td>
-  </tr><tr>
-    <td id="5">A5</td>
+  </tr><tr align="center">
+    <td id="5"> </td>
     <td>5</td>
-  </tr><tr>
-    <td id="6">B5</td>
+  </tr><tr align="center">
+    <td id="6"> </td>
     <td>6</td>
-  </tr><tr>
-    <td id="7">C6</td>
+  </tr><tr align="center">
+    <td id="7"> </td>
     <td>7</td>
-  </tr><tr>
-    <td id="8">D6</td>
+  </tr><tr align="center">
+    <td id="8"> </td>
     <td>8</td>
-  </tr><tr>
-    <td id="9">E6</td>
+  </tr><tr align="center">
+    <td id="9"> </td>
     <td>9</td>
   </tr>
-  <tr>
-    <td id="0">F6</td>
+  <tr align="center">
+    <td id="0"> </td>
     <td>0</td>
   </tr>
     </table>

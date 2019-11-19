@@ -588,3 +588,10 @@ function readArt() {
   document.getElementById("articulationOut").innerHTML = output;
  
 }
+
+
+
+
+function alertTest() {
+alert("How to use Number Music \n Step 1: Type in a number to convert to music \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select the articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play to hear your numbers converted to music")
+}
