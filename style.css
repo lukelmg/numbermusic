@@ -197,18 +197,36 @@ body {
 
 h1 {
   color: black;
-  font-size: 10vw;
+  font-size: 8vw;
   margin-bottom: 0;
   font-family: 'Roboto', sans-serif;
 }
 
 h2 {
   color:black;
-  font-size: 2em;
+  font-size: 5vw;
   font-family:Arial;
   font-weight:bold;
   font-family: 'Roboto', sans-serif;
 }
+  
+  span {
+    font-size: 3vw;
+  }
+  
+  #instructions {
+    background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  height: 5vw;
+  width: 120;
+  transition: .2s ease-in;
+   cursor: pointer;
+  margin-left: .8vw;
+    margin-bottom: 5vw;
+  }
 
 .input
 

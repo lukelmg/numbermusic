@@ -15,8 +15,8 @@
   </head>  
   <body onload="readTempo(); readArt();">
     <h1>Numbers to Music</h1>
-    <p class="main">Copyright &copy Luke Gutman, 2019</p>
-    <button onclick="alertTest();">click to test</button>
+    <span class="main">Copyright &copy Luke Gutman, 2019</span>
+    <button id="instructions" style="display=inline-block;" onclick="alertTest();">Instructions</button>
     <input id="mainInput" placeholder="Type Numbers Here"><br><br>
    <div class="sliderDiv">
     <center><p class="main" id="tempoOutput">
@@ -46,7 +46,7 @@
     <button id="submitButton" onclick="getNumber(); readSelect();">Play</button>
        <br><br> <span></span><span id="output"></span>
     
-    <table style="text-align: left; border: 1px solid gray;">
+    <table id="bigBoiTable" style="text-align: left; border: 1px solid gray;">
       <td colspan="2" id="mergedMiddle" align="center">Please Select a Scale</td>
   <tr>
     <th align="center">Note</th>
