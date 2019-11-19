@@ -49,8 +49,6 @@ function getNumber() {
       noteToPlay[letterNote]();
       
       lengthcount = lengthcount + 1;
-       
-       document.getElementById(lengthcount).innerHTML = letterNote;
 
     }, (tempoToMil) * i);
 
