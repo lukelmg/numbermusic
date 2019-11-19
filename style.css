@@ -197,7 +197,7 @@ body {
 
 h1 {
   color: black;
-  font-size: 5vh;
+  font-size: 10vw;
   margin-bottom: 0;
   font-family: 'Roboto', sans-serif;
 }
@@ -227,8 +227,8 @@ font-family: 'Roboto', sans-serif;
   color: black;
   border:none;
   width: 85vw;
-  height: 5vh;
-  font-size: 4vh;
+  height: 10vw;
+  font-size: 8vw;
   padding: 1%;
   border: 1px solid gray;
   font-family: 'Roboto', sans-serif;
@@ -248,8 +248,8 @@ font-family: 'Roboto', sans-serif;
   color:gray;
   font-family:arial;
   outline:none;
-  height: 7vh;
-  width:17vh;
+  height: 15vw;
+  width: 33.5vw;
   transition: .2s ease-in;
    cursor: pointer;
   margin-left: .8vw;
@@ -274,8 +274,8 @@ font-family: 'Roboto', sans-serif;
   color:gray;
   font-family:arial;
   outline:none;
-  height: 7vh;
-  width: 17vh;
+  height: 15vw;
+  width: 33.5vw;
   transition: .2s ease-in;
   cursor: pointer;
   
@@ -333,7 +333,7 @@ font-family: 'Roboto', sans-serif;
   border: 1px solid gray;
   padding: 5px 7px 5px 5px;
   width: 30vw;
-  height: 12vh;
+  height: 20vw;
   display:inline-block;
   float:left;
 }
@@ -345,7 +345,7 @@ font-family: 'Roboto', sans-serif;
   border: 1px solid gray;
   padding: 5px 7px 5px 5px;
   width: 30vw;
-  height: 12vh;
+  height: 20vw;
   margin-left: 1vw;
 }
 
@@ -353,7 +353,7 @@ font-family: 'Roboto', sans-serif;
 #tempoOutput, #articulationOut {
   color:gray;
   font-weigth:300;
-  font-size: 2vh;
+  font-size: 4vw;
 }
 
 

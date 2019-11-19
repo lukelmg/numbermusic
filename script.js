@@ -47,8 +47,10 @@ function getNumber() {
       convertSelectToFunctions();
 
       noteToPlay[letterNote]();
-
+      
       lengthcount = lengthcount + 1;
+       
+       document.getElementById(lengthcount).innerHTML = letterNote;
 
     }, (tempoToMil) * i);
 
@@ -63,6 +65,49 @@ function getNumber() {
   }
   }
 }
+
+function getNumberNoSound() {
+  
+  //alert(readFromSelect);
+  if (readFromSelect == "Select a Scale") {
+    alert("Please select a scale");
+  } else {
+  
+  
+  mynumber = document.getElementById("mainInput").value; //get number of input
+  var length = mynumber.toString().length; //calculate length of input
+
+  var number = mynumber,
+    output = [],
+    sNumber = number.toString();
+
+  for (var i = 0; i < length; i++) {
+     setTimeout(function() {
+      output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
+      note1 = output[length - length + lengthcount];
+      convertSelectToFunctions();
+
+   
+      
+      lengthcount = lengthcount + 1;
+       
+       document.getElementById(lengthcount).innerHTML = letterNote;
+
+    }, (1) * i);
+
+    if (i == length - 1) {
+      i = 0;
+      mynumber = "";
+      length = "";
+      number = "";
+      lengthcount = 0;
+      break;
+    }
+  }
+  }
+}
+
+
 var frequency = 440.0;
 var context = new AudioContext();
 var o = context.createOscillator();
