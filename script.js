@@ -61,13 +61,13 @@ function getNumber() {
 
       noteToPlay[letterNote]();
       
-            document.getElementById("submitButton").innerHTML = "Wait Until Finished";
+        document.getElementById("submitButton").disabled = true;
        
        doneYet = "no";
        
        
       lengthcount = lengthcount + 1;
-
+       
     }, (tempoToMil) * i);
 
     if (i == length - 1) {
@@ -85,7 +85,10 @@ function getNumber() {
   }
     
 }
+}
 
+function newNew() {
+  getNumber();
 }
 
 function getNumberNoSound() {
@@ -518,7 +521,7 @@ function cmajorblue() {
 
 $(document).on("keypress", function(e) {
   if (e.which == 13) {
-    getNumber();
+    newNew();
   }
 });
 
