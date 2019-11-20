@@ -140,6 +140,19 @@ font-family: 'Roboto', sans-serif;
   cursor: pointer;
 }
 
+ #instructions {
+    background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  height: 1vw;
+  width: 120;
+  transition: .2s ease-in;
+   cursor: pointer;
+  margin-left: .8vw;
+   margin-bottom: 1vw;
+  }
 
 .sliderDiv {
   color:gray;
@@ -172,8 +185,11 @@ font-family: 'Roboto', sans-serif;
 
 
 table, th, td {
-  border: 1px solid gray;
+  border: 1px solid black;
   border-collapse: collapse;
+  color:black;
+  margin-left: 1000000px;
+
 }
 
 /* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
@@ -379,9 +395,12 @@ font-family: 'Roboto', sans-serif;
 
 
 table, th, td {
-  border: 1px solid gray;
-  border-collapse: collapse;
+ 
   width: 50vw;
+  border: 1px solid black;
+  border-collapse: collapse;
+  color:black;
+  margin-left: 9999999999px;
 }
 
 

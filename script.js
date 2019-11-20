@@ -64,6 +64,8 @@ function getNumber() {
   }
 }
 
+var doneYet;
+
 function getNumberNoSound() {
   
   //alert(readFromSelect);
@@ -103,10 +105,16 @@ function getNumberNoSound() {
        
        document.getElementById(lengthcount).innerHTML = res;
 
+       
+document.getElementById("bigBoiTable").style.marginLeft = "0px";
+
     }, (1) * i);
 
     if (i == length - 1) {
       i = 0;
+      
+      doneYet = "yes";
+      
       mynumber = "";
       length = "";
       number = "";
