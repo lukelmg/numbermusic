@@ -140,6 +140,19 @@ font-family: 'Roboto', sans-serif;
   cursor: pointer;
 }
 
+ #instructions {
+    background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  height: 1vw;
+  width: 120;
+  transition: .2s ease-in;
+   cursor: pointer;
+  margin-left: .8vw;
+   margin-bottom: 1vw;
+  }
 
 .sliderDiv {
   color:gray;
@@ -172,6 +185,229 @@ font-family: 'Roboto', sans-serif;
 
 
 table, th, td {
-  border: 1px solid gray;
+  border: 1px solid black;
   border-collapse: collapse;
+  color:black;
+  margin-left: 1000000px;
+
+}
+
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+@media only screen and (max-width: 600px) {
+ 
+  
+  
+  
+  
+
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+body {
+  background-color:#white;
+}
+
+h1 {
+  color: black;
+  font-size: 8vw;
+  margin-bottom: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  color:black;
+  font-size: 5vw;
+  font-family:Arial;
+  font-weight:bold;
+  font-family: 'Roboto', sans-serif;
+}
+  
+  span {
+    font-size: 3vw;
+  }
+  
+  #instructions {
+    background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  height: 5vw;
+  width: 120;
+  transition: .2s ease-in;
+   cursor: pointer;
+  margin-left: .8vw;
+    margin-bottom: 5vw;
+  }
+
+.input
+
+.main {
+  margin-top:5px;
+  font-weigth:300;
+  font-size: 3vh;
+  color: white;
+  font-style:italic;
+  width: 30vw;
+font-family: 'Roboto', sans-serif;
+}
+
+#mainInput {
+  background-color: #gray;
+  color: black;
+  border:none;
+  width: 85vw;
+  height: 10vw;
+  font-size: 8vw;
+  padding: 1%;
+  border: 1px solid gray;
+  font-family: 'Roboto', sans-serif;
+}
+
+#mainInput:focus { color: black; outline:none; }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #gray;
+  opacity: 1; /* Firefox */
+}
+
+
+#submitButton {
+  background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  height: 15vw;
+  width: 33.5vw;
+  transition: .2s ease-in;
+   cursor: pointer;
+  margin-left: .8vw;
+}
+
+#submitButton:hover {
+  background-color:#E8E8E8;
+    color:gray;
+}
+
+#submitButton:after {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+
+#scales {
+  background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  height: 15vw;
+  width: 33.5vw;
+  transition: .2s ease-in;
+  cursor: pointer;
+  
+}
+
+
+#scales:hover {
+  background-color: #E8E8E8;
+  color:gray;
+  outline:none;
+}
+
+#scales:focus {
+  outline:none;
+}
+
+  #mergedMiddle {
+    text-align:middle;
+  }
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 30vw;
+  height: 6vw;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 5vw;
+  height: 5vw;
+  background: gray;
+  cursor: pointer;
+
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: gray;
+  cursor: pointer;
+}
+
+
+.sliderDiv {
+  color:gray;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 5px 7px 5px 5px;
+  width: 30vw;
+  height: 20vw;
+  display:inline-block;
+  float:left;
+}
+
+.accentDiv {
+  display:inline-block;
+  color:gray;
+  background-color: white;
+  border: 1px solid gray;
+  padding: 5px 7px 5px 5px;
+  width: 30vw;
+  height: 20vw;
+  margin-left: 1vw;
+}
+
+
+#tempoOutput, #articulationOut {
+  color:gray;
+  font-weigth:300;
+  font-size: 4vw;
+}
+
+
+table, th, td {
+ 
+  width: 50vw;
+  border: 1px solid black;
+  border-collapse: collapse;
+  color:black;
+  margin-left: 9999999999px;
+}
+
+
+
+
+
+  
+  
+  
 }

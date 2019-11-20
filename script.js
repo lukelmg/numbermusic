@@ -25,6 +25,9 @@ var letterNote = "A";
 
 var mynumber;
 
+var doneYet;
+
+
 function getNumber() {
   
   //alert(readFromSelect);
@@ -33,6 +36,16 @@ function getNumber() {
   } else {
   
   
+     if (doneYet == "no") {
+      
+       document.getElementById("submitButton").innerHTML = "Please Wait";
+       
+       
+    } else {
+  
+    
+ 
+      
   mynumber = document.getElementById("mainInput").value; //get number of input
   var length = mynumber.toString().length; //calculate length of input
 
@@ -47,13 +60,84 @@ function getNumber() {
       convertSelectToFunctions();
 
       noteToPlay[letterNote]();
-
+      
+        document.getElementById("submitButton").disabled = true;
+       
+       doneYet = "no";
+       
+       
       lengthcount = lengthcount + 1;
-
+       
     }, (tempoToMil) * i);
 
     if (i == length - 1) {
+      document.getElementById("submitButton").innerHTML = "Play";
+      
       i = 0;
+      mynumber = "";
+      length = "";
+      number = "";
+      lengthcount = 0;
+      break;
+      
+    }
+  }
+  }
+    
+}
+}
+
+function newNew() {
+  getNumber();
+}
+
+function getNumberNoSound() {
+  
+  //alert(readFromSelect);
+  if (readFromSelect == "Select a Scale") {
+    alert("Please select a scale");
+  } else {
+  
+  
+  mynumber = 1234567890;
+  var length = mynumber.toString().length; //calculate length of input
+
+  var number = mynumber,
+    output = [],
+    sNumber = number.toString();
+
+  for (var i = 0; i < length; i++) {
+     setTimeout(function() {
+      output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
+      note1 = output[length - length + lengthcount];
+      convertSelectToFunctions();
+
+      
+      
+      lengthcount = lengthcount + 1;
+       
+       var res = letterNote.replace("sharp", " #");
+       
+       res = res.replace("flat", "&#9837;");
+       
+       res = res.replace("5", "");
+       
+       res = res.replace("6", "");
+       
+       if (lengthcount == 10) {
+         lengthcount = 0;
+       }
+       
+       document.getElementById(lengthcount).innerHTML = res;
+
+       
+document.getElementById("bigBoiTable").style.marginLeft = "0px";
+
+    }, (1) * i);
+
+    if (i == length - 1) {
+      i = 0;
+      
       mynumber = "";
       length = "";
       number = "";
@@ -63,6 +147,8 @@ function getNumber() {
   }
   }
 }
+
+
 var frequency = 440.0;
 var context = new AudioContext();
 var o = context.createOscillator();
@@ -435,7 +521,7 @@ function cmajorblue() {
 
 $(document).on("keypress", function(e) {
   if (e.which == 13) {
-    getNumber();
+    newNew();
   }
 });
 
@@ -532,4 +618,11 @@ function readArt() {
   }
   document.getElementById("articulationOut").innerHTML = output;
  
+}
+
+
+
+
+function alertTest() {
+alert("How to use Number Music: \n Step 1: Type in a number to convert to music \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select the articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play to hear your numbers converted to music")
 }
