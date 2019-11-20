@@ -25,6 +25,9 @@ var letterNote = "A";
 
 var mynumber;
 
+var doneYet;
+
+
 function getNumber() {
   
   //alert(readFromSelect);
@@ -33,6 +36,16 @@ function getNumber() {
   } else {
   
   
+     if (doneYet == "no") {
+      
+       document.getElementById("submitButton").innerHTML = "Please Wait";
+       
+       
+    } else {
+  
+    
+ 
+      
   mynumber = document.getElementById("mainInput").value; //get number of input
   var length = mynumber.toString().length; //calculate length of input
 
@@ -48,23 +61,32 @@ function getNumber() {
 
       noteToPlay[letterNote]();
       
+            document.getElementById("submitButton").innerHTML = "Wait Until Finished";
+       
+       doneYet = "no";
+       
+       
       lengthcount = lengthcount + 1;
 
     }, (tempoToMil) * i);
 
     if (i == length - 1) {
+      document.getElementById("submitButton").innerHTML = "Play";
+      
       i = 0;
       mynumber = "";
       length = "";
       number = "";
       lengthcount = 0;
       break;
+      
     }
   }
   }
+    
 }
 
-var doneYet;
+}
 
 function getNumberNoSound() {
   
@@ -112,8 +134,6 @@ document.getElementById("bigBoiTable").style.marginLeft = "0px";
 
     if (i == length - 1) {
       i = 0;
-      
-      doneYet = "yes";
       
       mynumber = "";
       length = "";
