@@ -623,6 +623,13 @@ function alertTest() {
 alert("Step 1: Type in a number to convert to music \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play")
 }
 
+
 function fillPi () {
-  document.getElementById("mainInput").value = Math.pi;
+  document.getElementById("mainInput").value = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679";
+}
+function fillE () {
+  document.getElementById("mainInput").vaule = "2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427";
+}
+function fillSq2() {
+  document.getElementById("mainInput").value = "1.414213562373095048801688724209698078569671875376948073176679737990732478462107038850387534327641572";
 }
