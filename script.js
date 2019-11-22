@@ -633,3 +633,10 @@ function fillE () {
 function fillSq2() {
   document.getElementById("mainInput").value = "1.414213562373095048801688724209698078569671875376948073176679737990732478462107038850387534327641572";
 }
+function fillGolden() {
+  document.getElementById("mainInput")
+}
+})
+function fillC() {
+  document.getElementById("mainInput").value = "299792458";
+}
