@@ -28,6 +28,20 @@ var mynumber;
 
 var doneYet;
 
+var extraDelayTime;
+
+function disablePlay() {
+  document.getElementById("submitButton").innerHTML = "Please Wait";
+  document.getElementById("submitButton").disabled = true;
+  
+setTimeout(doSomething, extraDelayTime);
+}
+
+function doSomething() {
+  document.getElementById("submitButton").innerHTML = "Play";
+  document.getElementById("submitButton").disabled = false;
+}
+
 function getNumber() {
   
   if (readFromSelect == "Select a Scale") {
@@ -36,13 +50,13 @@ function getNumber() {
   
   
      if (doneYet == "no") {
-      
-       document.getElementById("submitButton").innerHTML = "Please Wait";
        
        
     } else {   
   mynumber = document.getElementById("mainInput").value; //get number of input
   var length = mynumber.toString().length; //calculate length of input
+      extraDelayTime = length * tempoToMil;
+      disablePlay();
 
   var number = mynumber,
     output = [],
@@ -56,12 +70,13 @@ function getNumber() {
 
       noteToPlay[letterNote]();
       
-        document.getElementById("submitButton").disabled = true;
        
        doneYet = "no";
        
        
       lengthcount = lengthcount + 1;
+       
+       
        
     }, (tempoToMil) * i);
 
