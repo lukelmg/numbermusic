@@ -1,4 +1,5 @@
 var input = document.getElementById("mainInput");
+document.getElementById("mainInput").focus();
 input.focus();
 input.select();
 
@@ -27,10 +28,8 @@ var mynumber;
 
 var doneYet;
 
-
 function getNumber() {
   
-  //alert(readFromSelect);
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
@@ -41,11 +40,7 @@ function getNumber() {
        document.getElementById("submitButton").innerHTML = "Please Wait";
        
        
-    } else {
-  
-    
- 
-      
+    } else {   
   mynumber = document.getElementById("mainInput").value; //get number of input
   var length = mynumber.toString().length; //calculate length of input
 
@@ -82,6 +77,7 @@ function getNumber() {
       
     }
   }
+           document.getElementById("submitButton").disabled = false;
   }
     
 }
@@ -93,7 +89,6 @@ function newNew() {
 
 function getNumberNoSound() {
   
-  //alert(readFromSelect);
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
@@ -552,13 +547,9 @@ function playNote(frequency, duration) {
 
 letterValue();
 function letterValue(str) {
-  //var cmajorNotes={
-  //    C5: 1, D5: 2, E5: 3, F5: 4, G5: 5, A5: 6, B5: 7, C6: 8, D6: 9, E6: 0,
-  //}
 
   var cmajNotes = ["C5", "Csharp5", "D5", "Eflat5", "E5", "F5"];
 
-  //alert(cmajNotes);
 }
 
 var selectedScale = "Select a Scale";
@@ -619,9 +610,6 @@ function readArt() {
   document.getElementById("articulationOut").innerHTML = output;
  
 }
-
-
-
 
 function alertTest() {
 alert("Step 1: Type in a number to convert to music \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play")
