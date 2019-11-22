@@ -623,9 +623,6 @@ function alertTest() {
 alert("Step 1: Type in a number to convert to music \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play")
 }
 
-
-
-
 function fillPi () {
   document.getElementById("mainInput").value = Math.pi;
 }
