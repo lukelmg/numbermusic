@@ -17,13 +17,20 @@
     <h1>Numbers to Music</h1>
     <span class="main">Copyright &copy Luke Gutman, 2019</span>
     <button id="instructions" style="display=inline-block;" onclick="alertTest();">Instructions</button>
-    <input id="mainInput" placeholder="Type Numbers Here"><br><br>
+    <input id="mainInput" placeholder="Type Numbers Here">
+    <br><br>
+    <button id="pi" class="preset" onclick="fillPi();">&#120529;</button>
+    
+    <br><br>
+    
+    
    <div class="sliderDiv">
     <center><p class="main" id="tempoOutput">
       Tempo
       </p></center>
      <input type="range" min="10" max="240" value="120" class="slider" id="tempoSlider" oninput="readTempo();">
     </div>
+  
     
      <div class="accentDiv">
     <center><p class="main" id="articulationOut">
