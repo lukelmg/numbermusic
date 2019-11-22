@@ -2,7 +2,7 @@
 
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+  margin: 1em;
 }
 
 body {
@@ -146,13 +146,37 @@ font-family: 'Roboto', sans-serif;
   color:gray;
   font-family:arial;
   outline:none;
-  height: 1vw;
+  height: 1.5vw;
   width: 120;
   transition: .2s ease-in;
    cursor: pointer;
   margin-left: .8vw;
    margin-bottom: 1vw;
   }
+
+
+ .preset {
+    background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+  outline:none;
+  transition: .2s ease-in;
+   cursor: pointer;
+   height: 2.5vw;
+   width: 2.5vw;
+   display:inline-block;
+   padding: 5px 5px 5px 5px;
+  }
+
+.preset:hover {
+  background-color:#E8E8E8;
+}
+
+#presetDiv {
+  background-color:black;
+  padding: 10px 10px 10px 10px;
+}
 
 .sliderDiv {
   color:gray;
@@ -185,10 +209,11 @@ font-family: 'Roboto', sans-serif;
 
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid gray;
   border-collapse: collapse;
-  color:black;
+  color:gray;
   margin-left: 1000000px;
+  font-size:.9vw;
 
 }
 
@@ -397,17 +422,9 @@ font-family: 'Roboto', sans-serif;
 table, th, td {
  
   width: 50vw;
-  border: 1px solid black;
+  border: 1px solid gray;
   border-collapse: collapse;
-  color:black;
+  color:gray;
   margin-left: 9999999999px;
-}
-
-
-
-
-
-  
-  
-  
+} 
 }

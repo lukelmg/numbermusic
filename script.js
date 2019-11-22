@@ -1,4 +1,5 @@
 var input = document.getElementById("mainInput");
+document.getElementById("mainInput").focus();
 input.focus();
 input.select();
 
@@ -25,29 +26,31 @@ var letterNote = "A";
 
 var mynumber;
 
-var doneYet;
 
+var extraDelayTime;
+
+function disablePlay() {
+  document.getElementById("submitButton").innerHTML = "Please Wait";
+  document.getElementById("submitButton").disabled = true;
+  
+  setTimeout(doSomething, extraDelayTime);
+}
+
+function doSomething() {
+  document.getElementById("submitButton").innerHTML = "Play";
+  document.getElementById("submitButton").disabled = false;
+}
 
 function getNumber() {
   
-  //alert(readFromSelect);
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
-  
-  
-     if (doneYet == "no") {
-      
-       document.getElementById("submitButton").innerHTML = "Please Wait";
-       
-       
-    } else {
-  
-    
- 
-      
+
   mynumber = document.getElementById("mainInput").value; //get number of input
   var length = mynumber.toString().length; //calculate length of input
+      extraDelayTime = length * tempoToMil;
+      disablePlay();
 
   var number = mynumber,
     output = [],
@@ -61,12 +64,12 @@ function getNumber() {
 
       noteToPlay[letterNote]();
       
-        document.getElementById("submitButton").disabled = true;
        
-       doneYet = "no";
-       
+        
        
       lengthcount = lengthcount + 1;
+       
+       
        
     }, (tempoToMil) * i);
 
@@ -82,10 +85,11 @@ function getNumber() {
       
     }
   }
+           document.getElementById("submitButton").disabled = false;
   }
     
 }
-}
+
 
 function newNew() {
   getNumber();
@@ -93,7 +97,6 @@ function newNew() {
 
 function getNumberNoSound() {
   
-  //alert(readFromSelect);
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
@@ -552,13 +555,9 @@ function playNote(frequency, duration) {
 
 letterValue();
 function letterValue(str) {
-  //var cmajorNotes={
-  //    C5: 1, D5: 2, E5: 3, F5: 4, G5: 5, A5: 6, B5: 7, C6: 8, D6: 9, E6: 0,
-  //}
 
   var cmajNotes = ["C5", "Csharp5", "D5", "Eflat5", "E5", "F5"];
 
-  //alert(cmajNotes);
 }
 
 var selectedScale = "Select a Scale";
@@ -620,9 +619,17 @@ function readArt() {
  
 }
 
-
-
-
 function alertTest() {
-alert("How to use Number Music: \n Step 1: Type in a number to convert to music \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select the articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play to hear your numbers converted to music")
+alert("Step 1: Type in a number to convert to music \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play")
+}
+
+
+function fillPi () {
+  document.getElementById("mainInput").value = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679";
+}
+function fillE () {
+  document.getElementById("mainInput").value = "2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427";
+}
+function fillSq2() {
+  document.getElementById("mainInput").value = "1.414213562373095048801688724209698078569671875376948073176679737990732478462107038850387534327641572";
 }
