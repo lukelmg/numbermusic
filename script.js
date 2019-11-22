@@ -26,7 +26,6 @@ var letterNote = "A";
 
 var mynumber;
 
-var doneYet;
 
 var extraDelayTime;
 
@@ -34,7 +33,7 @@ function disablePlay() {
   document.getElementById("submitButton").innerHTML = "Please Wait";
   document.getElementById("submitButton").disabled = true;
   
-setTimeout(doSomething, extraDelayTime);
+  setTimeout(doSomething, extraDelayTime);
 }
 
 function doSomething() {
@@ -47,12 +46,7 @@ function getNumber() {
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
-  
-  
-     if (doneYet == "no") {
-       
-       
-    } else {   
+
   mynumber = document.getElementById("mainInput").value; //get number of input
   var length = mynumber.toString().length; //calculate length of input
       extraDelayTime = length * tempoToMil;
@@ -71,8 +65,7 @@ function getNumber() {
       noteToPlay[letterNote]();
       
        
-       doneYet = "no";
-       
+        
        
       lengthcount = lengthcount + 1;
        
@@ -96,7 +89,7 @@ function getNumber() {
   }
     
 }
-}
+
 
 function newNew() {
   getNumber();
