@@ -160,6 +160,7 @@ font-family: 'Roboto', sans-serif;
   border: 1px solid gray;
   color:gray;
   font-family:arial;
+   font-size: 1vw;
   outline:none;
   transition: .2s ease-in;
    cursor: pointer;
