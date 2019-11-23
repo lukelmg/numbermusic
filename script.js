@@ -1,3 +1,8 @@
+function stopAll() {
+  throw new Error('This is not an error. This is just to abort javascript');
+}
+
+
 var input = document.getElementById("mainInput");
 document.getElementById("mainInput").focus();
 input.focus();
@@ -620,7 +625,7 @@ function readArt() {
 }
 
 function alertTest() {
-alert("Step 1: Type in a number to convert to music \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play")
+alert("Step 1: Type in a number (or select a preset) to convert to music \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play")
 }
 
 
@@ -633,9 +638,12 @@ function fillE () {
 function fillSq2() {
   document.getElementById("mainInput").value = "1.41421356237309504880168872420969807856967187537694807317667973799073247846210703885038753432";
 }
-function fillGolden() {
+function fillPhi() {
   document.getElementById("mainInput").value = "1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418"
 }
-function fillC() {
+function fillSq3() {
+  document.getElementById("mainInput").value = "1.732050807568877293527446341505872366942805253810380628055806979451933016908800037081146186757";
+}
+function fillC () {
   document.getElementById("mainInput").value = "299792458";
 }
