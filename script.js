@@ -647,3 +647,6 @@ function fillSq3() {
 function fillC () {
   document.getElementById("mainInput").value = "299792458";
 }
+function clearMainInput() {
+  document.getElementById("mainInput").value = "";
+}

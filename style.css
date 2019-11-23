@@ -173,6 +173,10 @@ font-family: 'Roboto', sans-serif;
   background-color:#E8E8E8;
 }
 
+#clear {
+  width: 3.5vw;
+}
+
 #presetDiv {
   background-color:transparent;
 }
