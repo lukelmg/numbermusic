@@ -140,7 +140,7 @@ font-family: 'Roboto', sans-serif;
   cursor: pointer;
 }
 
- #instructions {
+ .instructions {
     background-color:white;
   border: 1px solid gray;
   color:gray;
