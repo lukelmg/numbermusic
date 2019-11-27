@@ -140,7 +140,7 @@ font-family: 'Roboto', sans-serif;
   cursor: pointer;
 }
 
- #instructions {
+ .instructions {
     background-color:white;
   border: 1px solid gray;
   color:gray;
@@ -160,22 +160,26 @@ font-family: 'Roboto', sans-serif;
   border: 1px solid gray;
   color:gray;
   font-family:arial;
+   font-size: 1vw;
   outline:none;
   transition: .2s ease-in;
    cursor: pointer;
    height: 2.5vw;
    width: 2.5vw;
-   display:inline-block;
-   padding: 5px 5px 5px 5px;
+   display:inline;
+   vertical-align:top;
   }
 
 .preset:hover {
   background-color:#E8E8E8;
 }
 
+#clear {
+  width: 3.5vw;
+}
+
 #presetDiv {
-  background-color:black;
-  padding: 10px 10px 10px 10px;
+  background-color:transparent;
 }
 
 .sliderDiv {
@@ -229,7 +233,7 @@ table, th, td {
 
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+  margin: 5vw;
 }
 
 body {
@@ -255,18 +259,26 @@ h2 {
     font-size: 3vw;
   }
   
-  #instructions {
+  .instructions {
     background-color:white;
   border: 1px solid gray;
   color:gray;
   font-family:arial;
   outline:none;
-  height: 5vw;
-  width: 120;
+  height: 5vh;
+  width: 87vw;
   transition: .2s ease-in;
    cursor: pointer;
-  margin-left: .8vw;
-    margin-bottom: 5vw;
+   margin-left: 0vw;
+    margin-bottom: 0px;
+    margin-top: 3vh;
+    align: center;
+    
+  }
+  
+  #stopRes {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
 
 .input
@@ -427,4 +439,28 @@ table, th, td {
   color:gray;
   margin-left: 9999999999px;
 } 
+  
+  
+   .preset {
+    background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+   font-size: 4vw;
+  outline:none;
+  transition: .2s ease-in;
+   cursor: pointer;
+   height: 8vw;
+   width: 8vw;
+   display:inline;
+   vertical-align:top;
+  }
+  
+  
+  #clear {
+    width: 20vw;
+  }
+
+  
+  
 }

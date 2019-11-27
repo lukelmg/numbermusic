@@ -16,15 +16,20 @@
   <body onload="readTempo(); readArt();">
     <h1>Numbers to Music</h1>
     <span class="main">Copyright &copy Luke Gutman, 2019</span>
-    <button id="instructions" style="display=inline-block;" onclick="alertTest();">Instructions</button>
+    <button class="instructions" style="display=inline-block;" onclick="alertTest();">Instructions</button>
+    <button id="stopRes" class="instructions" onclick="location.reload();">Reset/Stop</button>
     <input id="mainInput" placeholder="Type Numbers Here">
     <br><br>
     <div id="presetDiv">
       <button id="pi" class="preset" onclick="fillPi();">&#120529;</button>
       <button id="e" class="preset" onclick="fillE();">e</button>
-      <button id="sq2" class="preset" onclick="fillSq2();">/2</button>
-    </div>
-    <br><br>
+      <button id="sq2" class="preset" onclick="fillSq2();">&#8730;2</button>
+      <button id="sq3" class="preset" onclick="fillSq3();">&#8730;3</button>
+      <button id="phi" class="preset" onclick="fillPhi();">&#934;</button>
+      <button id="c" class="preset" onclick="fillC();">c</button>
+      <button id="clear" class="preset" onclick="clearMainInput();">Clear</button>
+
+    </div> <br>
     
     
    <div class="sliderDiv">
@@ -55,7 +60,6 @@
     </select>
     <button id="submitButton" onclick="newNew(); readSelect();">Play</button>
        <br><br> <span></span><span id="output"></span>
-    
     <table id="bigBoiTable" style="text-align: left;">
   <tr>
     <th align="center">Note</th>
@@ -95,6 +99,8 @@
     <td>0</td>
   </tr>
     </table>
+    
+  
     
   </body>
 </html>

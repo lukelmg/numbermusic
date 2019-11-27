@@ -1,3 +1,8 @@
+function stopAll() {
+  throw new Error('This is not an error. This is just to abort javascript');
+}
+
+
 var input = document.getElementById("mainInput");
 document.getElementById("mainInput").focus();
 input.focus();
@@ -620,16 +625,28 @@ function readArt() {
 }
 
 function alertTest() {
-alert("Step 1: Type in a number to convert to music \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play")
+alert("Step 1: Type in a number (or select a preset) to convert to music [Dashes register as rests] \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play")
 }
 
 
 function fillPi () {
-  document.getElementById("mainInput").value = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679";
+  document.getElementById("mainInput").value = "3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342";
 }
 function fillE () {
-  document.getElementById("mainInput").value = "2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427";
+  document.getElementById("mainInput").value = "2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525";
 }
 function fillSq2() {
-  document.getElementById("mainInput").value = "1.414213562373095048801688724209698078569671875376948073176679737990732478462107038850387534327641572";
+  document.getElementById("mainInput").value = "1.41421356237309504880168872420969807856967187537694807317667973799073247846210703885038753432";
+}
+function fillPhi() {
+  document.getElementById("mainInput").value = "1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418"
+}
+function fillSq3() {
+  document.getElementById("mainInput").value = "1.732050807568877293527446341505872366942805253810380628055806979451933016908800037081146186757";
+}
+function fillC () {
+  document.getElementById("mainInput").value = "299792458";
+}
+function clearMainInput() {
+  document.getElementById("mainInput").value = "";
 }
