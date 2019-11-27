@@ -167,6 +167,7 @@ font-family: 'Roboto', sans-serif;
    height: 2.5vw;
    width: 2.5vw;
    display:inline;
+   vertical-align:top;
   }
 
 .preset:hover {
@@ -258,18 +259,21 @@ h2 {
     font-size: 3vw;
   }
   
-  #instructions {
+  .instructions {
     background-color:white;
   border: 1px solid gray;
   color:gray;
   font-family:arial;
   outline:none;
-  height: 5vw;
-  width: 120;
+  height: 5vh;
+  width: 20vh;
   transition: .2s ease-in;
    cursor: pointer;
-  margin-left: .8vw;
+    overflow-wrap: break;
+   margin-left: 3vw;
     margin-bottom: 5vw;
+    margin-top: 2vh;
+    display:inline-block;
   }
 
 .input
@@ -430,4 +434,28 @@ table, th, td {
   color:gray;
   margin-left: 9999999999px;
 } 
+  
+  
+   .preset {
+    background-color:white;
+  border: 1px solid gray;
+  color:gray;
+  font-family:arial;
+   font-size: 2vh;
+  outline:none;
+  transition: .2s ease-in;
+   cursor: pointer;
+   height: 4vh;
+   width: 4vh;
+   display:inline;
+   vertical-align:top;
+  }
+  
+  
+  #clear {
+    width: 10vh;
+  }
+
+  
+  
 }
