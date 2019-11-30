@@ -53,6 +53,7 @@ function getNumber() {
   } else {
 
   mynumber = document.getElementById("mainInput").value; //get number of input
+  //  alert(mynumber);
   var length = mynumber.toString().length; //calculate length of input
       extraDelayTime = length * tempoToMil;
       disablePlay();
@@ -63,9 +64,10 @@ function getNumber() {
 
   for (var i = 0; i < length; i++) {
      setTimeout(function() {
-      output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
+     output.push(+sNumber[lengthcount]); //change i to lengthcount
+      //alert(output);
       note1 = output[length - length + lengthcount];
-       alert(note1);
+     
       convertSelectToFunctions();
 
       noteToPlay[letterNote]();
