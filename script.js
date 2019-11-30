@@ -53,7 +53,7 @@ function getNumber() {
   } else {
 
   mynumber = document.getElementById("mainInput").value; //get number of input
-  //  alert(mynumber);
+    alert(mynumber);
   var length = mynumber.toString().length; //calculate length of input
       extraDelayTime = length * tempoToMil;
       disablePlay();
