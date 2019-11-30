@@ -65,6 +65,7 @@ function getNumber() {
      setTimeout(function() {
       output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
       note1 = output[length - length + lengthcount];
+       alert(note1);
       convertSelectToFunctions();
 
       noteToPlay[letterNote]();
@@ -191,7 +192,7 @@ var nanValue = NaN;
 
 var noteToPlay = {
   pause: function() {
-    playNote(1000, 500000);
+    playNote(0, noteDuration);
   },
 
   C5: function() {
@@ -317,7 +318,6 @@ alert(letterNote);
 }
 
 function cmajor() {
-  //alert(note1);
   if (note1 == 1) {
     letterNote = "C5";
   } else {
@@ -345,7 +345,7 @@ function cmajor() {
                   if (note1 == 9) {
                     letterNote = "D6";
                   } else {
-                    if (note1 == 0) {
+                    if (note1 == 0 || note1 == '0' || note1 == "0" || note1 == "&#48;") {
                       letterNote = "E6";
                     } else {
                       letterNote = "pause";
@@ -359,7 +359,6 @@ function cmajor() {
       }
     }
   }
-  //alert(letterNote);
 }
 
 function dmajor() {
