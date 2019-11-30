@@ -191,7 +191,7 @@ var nanValue = NaN;
 
 var noteToPlay = {
   pause: function() {
-    playNote(1, noteDuration);
+    playNote(1000, 500000);
   },
 
   C5: function() {
@@ -270,6 +270,7 @@ var noteToPlay = {
 };
 
 function detectNote1() {
+  alert(note1);
   if (note1 == 1) {
     letterNote = "C5";
   } else {
@@ -311,11 +312,12 @@ function detectNote1() {
       }
     }
   }
-
+alert(letterNote);
   document.getElementById("output").innerHTML = letterNote;
 }
 
 function cmajor() {
+  //alert(note1);
   if (note1 == 1) {
     letterNote = "C5";
   } else {
@@ -357,6 +359,7 @@ function cmajor() {
       }
     }
   }
+  //alert(letterNote);
 }
 
 function dmajor() {
