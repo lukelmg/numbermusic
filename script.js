@@ -72,9 +72,6 @@ function getNumber() {
 
       noteToPlay[letterNote]();
       
-       
-        
-       
       lengthcount = lengthcount + 1;
        
        
