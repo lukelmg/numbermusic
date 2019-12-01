@@ -1,3 +1,4 @@
+
 function stopAll() {
   throw new Error("This is not an error. This is just to abort javascript");
 }
@@ -97,6 +98,7 @@ function getNumberNoSound() {
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
+      $("table").show();
     var length = mynumber.toString().length; //calculate length of input
     extraDelayTime = length * tempoToMil;
     disablePlay();
@@ -124,7 +126,7 @@ function getNumberNoSound() {
 
         document.getElementById(lengthcount).innerHTML = res;
 
-        document.getElementById("bigBoiTable").style.marginLeft = "0px";
+     
       }, 1 * i);
 
       if (i == length - 1) {
