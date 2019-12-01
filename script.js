@@ -101,14 +101,14 @@ function getNumberNoSound() {
   } else {
   
   
-  mynumber = 123456789000;
+ var mynumber = 123456789000;
   var length = mynumber.toString().length; //calculate length of input
 
   var number = mynumber,
     output = [],
     sNumber = number.toString();
 
-  for (var i = 0; i < length; i++) {
+  for (var i = -1; i < 10; i++) {
      setTimeout(function() {
       output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
       note1 = output[length - length + lengthcount];
@@ -129,22 +129,15 @@ function getNumberNoSound() {
        if (lengthcount == 10) {
          lengthcount = 0;
        }
+       console.log(lengthcount);
        
        document.getElementById(lengthcount).innerHTML = res;
+
   $("table").show();
   
 
     }, (1) * i);
 
-    if (i == length - 1) {
-      i = 0;
-      
-      mynumber = "";
-      length = "";
-      number = "";
-      lengthcount = 0;
-      break;
-    }
   }
   }
 }
