@@ -93,53 +93,62 @@ function getNumber() {
 function newNew() {
   getNumber();
 }
-
+  $("table").hide();
 function getNumberNoSound() {
+  
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
-      $("table").show();
-    var length = mynumber.toString().length; //calculate length of input
-    extraDelayTime = length * tempoToMil;
-    disablePlay();
+  
+  
+  mynumber = 123456789000;
+  var length = mynumber.toString().length; //calculate length of input
 
-    var split = mynumber.split("");
+  var number = mynumber,
+    output = [],
+    sNumber = number.toString();
 
-    for (var i = 0; i < length; i++) {
-      setTimeout(function() {
-        note1 = split[length - length + lengthcount];
-        convertSelectToFunctions();
+  for (var i = 0; i < length; i++) {
+     setTimeout(function() {
+      output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
+      note1 = output[length - length + lengthcount];
+      convertSelectToFunctions();
 
-        lengthcount = lengthcount + 1;
+      
+      
+      lengthcount = lengthcount + 1;
+       
+       var res = letterNote.replace("sharp", " #");
+       
+       res = res.replace("flat", "&#9837;");
+       
+       res = res.replace("5", "");
+       
+       res = res.replace("6", "");
+       
+       if (lengthcount == 10) {
+         lengthcount = 0;
+       }
+       
+       document.getElementById(lengthcount).innerHTML = res;
+  $("table").show();
+  
 
-        var res = letterNote.replace("sharp", " #");
+    }, (1) * i);
 
-        res = res.replace("flat", "&#9837;");
-
-        res = res.replace("5", "");
-
-        res = res.replace("6", "");
-
-        if (lengthcount == 10) {
-          lengthcount = 0;
-        }
-
-        document.getElementById(lengthcount).innerHTML = res;
-
-     
-      }, 1 * i);
-
-      if (i == length - 1) {
-        i = 0;
-
-        mynumber = "";
-        length = "";
-        lengthcount = 0;
-        break;
-      }
+    if (i == length - 1) {
+      i = 0;
+      
+      mynumber = "";
+      length = "";
+      number = "";
+      lengthcount = 0;
+      break;
     }
   }
+  }
 }
+
 
 var frequency = 440.0;
 var context = new AudioContext();
