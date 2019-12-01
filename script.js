@@ -53,25 +53,31 @@ function getNumber() {
   } else {
 
   mynumber = document.getElementById("mainInput").value; //get number of input
+   // alert(mynumber);
   var length = mynumber.toString().length; //calculate length of input
       extraDelayTime = length * tempoToMil;
       disablePlay();
 
-  var number = mynumber,
+/*  var number = mynumber,
     output = [],
     sNumber = number.toString();
+    */
+    
+ var split = mynumber.split('');
+    alert(split);
 
   for (var i = 0; i < length; i++) {
      setTimeout(function() {
-      output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
-      note1 = output[length - length + lengthcount];
+   //  output.push(+sNumber[lengthcount]); //change i to lengthcount
+      //alert(output);
+      
+      note1 = split[length - length + lengthcount];
+      // alert(note1);
+     
       convertSelectToFunctions();
 
       noteToPlay[letterNote]();
       
-       
-        
-       
       lengthcount = lengthcount + 1;
        
        
@@ -84,7 +90,7 @@ function getNumber() {
       i = 0;
       mynumber = "";
       length = "";
-      number = "";
+    //  number = "";
       lengthcount = 0;
       break;
       
@@ -107,17 +113,17 @@ function getNumberNoSound() {
   } else {
   
   
-  mynumber = 1234567890;
-  var length = mynumber.toString().length; //calculate length of input
+   var length = mynumber.toString().length; //calculate length of input
+      extraDelayTime = length * tempoToMil;
+      disablePlay();
+    
+ var split = mynumber.split('');
 
-  var number = mynumber,
-    output = [],
-    sNumber = number.toString();
 
   for (var i = 0; i < length; i++) {
      setTimeout(function() {
-      output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
-      note1 = output[length - length + lengthcount];
+     
+      note1 = split[length - length + lengthcount];
       convertSelectToFunctions();
 
       
@@ -148,7 +154,7 @@ document.getElementById("bigBoiTable").style.marginLeft = "0px";
       
       mynumber = "";
       length = "";
-      number = "";
+      //number = "";
       lengthcount = 0;
       break;
     }
@@ -191,7 +197,7 @@ var nanValue = NaN;
 
 var noteToPlay = {
   pause: function() {
-    playNote(1, noteDuration);
+    playNote(0, noteDuration);
   },
 
   C5: function() {
@@ -270,6 +276,7 @@ var noteToPlay = {
 };
 
 function detectNote1() {
+  alert(note1);
   if (note1 == 1) {
     letterNote = "C5";
   } else {
@@ -311,11 +318,12 @@ function detectNote1() {
       }
     }
   }
-
+alert(letterNote);
   document.getElementById("output").innerHTML = letterNote;
 }
 
 function cmajor() {
+ // alert(note1);
   if (note1 == 1) {
     letterNote = "C5";
   } else {
@@ -343,8 +351,10 @@ function cmajor() {
                   if (note1 == 9) {
                     letterNote = "D6";
                   } else {
-                    if (note1 == 0) {
-                      letterNote = "E6";
+                    if (!note1.replace(/\s/g, '').length) {
+                     letterNote = "pause";
+                      } else if(note1 == 0) {   
+                     letterNote = "E6"
                     } else {
                       letterNote = "pause";
                     }
@@ -387,11 +397,14 @@ function dmajor() {
                   if (note1 == 9) {
                     letterNote = "E6";
                   } else {
-                    if (note1 == 0) {
-                      letterNote = "Fsharp6";
+                    if (!note1.replace(/\s/g, '').length) {
+                     letterNote = "pause";
+                      } else if(note1 == 0) {   
+                     letterNote = "Fsharp6"
                     } else {
                       letterNote = "pause";
                     }
+                    
                   }
                 }
               }
@@ -431,8 +444,10 @@ function emajor() {
                   if (note1 == 9) {
                     letterNote = "Fsharp6";
                   } else {
-                    if (note1 == 0) {
-                      letterNote = "Gsharp6";
+                   if (!note1.replace(/\s/g, '').length) {
+                     letterNote = "pause";
+                      } else if(note1 == 0) {   
+                     letterNote = "Gsharp6"
                     } else {
                       letterNote = "pause";
                     }
@@ -466,11 +481,13 @@ function fmajor() {
     letterNote = "F6";
   } else if (note1 == 9) {
     letterNote = "G6";
-  } else if (note1 == 0) {
-    letterNote = "A6";
-  } else {
+  } else if (!note1.replace(/\s/g, '').length) {
     letterNote = "pause";
-  }
+  } else if(note1 == 0) {   
+                     letterNote = "A6"
+                    } else {
+                      letterNote = "pause";
+                    }
 }
 
 
@@ -493,11 +510,13 @@ function gmajor() {
     letterNote = "G6";
   } else if (note1 == 9) {
     letterNote = "A6";
-  } else if (note1 == 0) {
-    letterNote = "B6";
-  } else {
+  } else if (!note1.replace(/\s/g, '').length) {
     letterNote = "pause";
-  }
+  } else if(note1 == 0) {   
+                     letterNote = "B6"
+                    } else {
+                      letterNote = "pause";
+                    }
 }
 
 
@@ -520,11 +539,13 @@ function cmajorblue() {
     letterNote = "Eflat6";
   } else if (note1 == 9) {
     letterNote = "F6";
-  } else if (note1 == 0) {
-    letterNote = "Fsharp6";
-  } else {
+  } else if (!note1.replace(/\s/g, '').length) {
     letterNote = "pause";
-  }
+  } else if(note1 == 0) {   
+                     letterNote = "Fsharp6"
+                    } else {
+                      letterNote = "pause";
+                    }
 }
 
 $(document).on("keypress", function(e) {
