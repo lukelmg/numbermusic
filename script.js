@@ -53,20 +53,26 @@ function getNumber() {
   } else {
 
   mynumber = document.getElementById("mainInput").value; //get number of input
-    alert(mynumber);
+   // alert(mynumber);
   var length = mynumber.toString().length; //calculate length of input
       extraDelayTime = length * tempoToMil;
       disablePlay();
 
-  var number = mynumber,
+/*  var number = mynumber,
     output = [],
     sNumber = number.toString();
+    */
+    
+ var split = mynumber.split('');
+    alert(split);
 
   for (var i = 0; i < length; i++) {
      setTimeout(function() {
-     output.push(+sNumber[lengthcount]); //change i to lengthcount
+   //  output.push(+sNumber[lengthcount]); //change i to lengthcount
       //alert(output);
-      note1 = output[length - length + lengthcount];
+      
+      note1 = split[length - length + lengthcount];
+      // alert(note1);
      
       convertSelectToFunctions();
 
@@ -84,7 +90,7 @@ function getNumber() {
       i = 0;
       mynumber = "";
       length = "";
-      number = "";
+    //  number = "";
       lengthcount = 0;
       break;
       
@@ -107,17 +113,17 @@ function getNumberNoSound() {
   } else {
   
   
-  mynumber = 1234567890;
-  var length = mynumber.toString().length; //calculate length of input
+   var length = mynumber.toString().length; //calculate length of input
+      extraDelayTime = length * tempoToMil;
+      disablePlay();
+    
+ var split = mynumber.split('');
 
-  var number = mynumber,
-    output = [],
-    sNumber = number.toString();
 
   for (var i = 0; i < length; i++) {
      setTimeout(function() {
-      output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
-      note1 = output[length - length + lengthcount];
+     
+      note1 = split[length - length + lengthcount];
       convertSelectToFunctions();
 
       
