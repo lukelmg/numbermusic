@@ -353,8 +353,10 @@ function cmajor() {
                   } else {
                     if (!note1.replace(/\s/g, '').length) {
                      letterNote = "pause";
-                      } else {   
+                      } else if(note1 == 0) {   
                      letterNote = "E6"
+                    } else {
+                      letterNote = "pause";
                     }
                   }
                 }
@@ -402,6 +404,7 @@ function dmajor() {
                     } else {
                       letterNote = "pause";
                     }
+                    
                   }
                 }
               }
@@ -443,8 +446,10 @@ function emajor() {
                   } else {
                    if (!note1.replace(/\s/g, '').length) {
                      letterNote = "pause";
-                      } else {   
+                      } else if(note1 == 0) {   
                      letterNote = "Gsharp6"
+                    } else {
+                      letterNote = "pause";
                     }
                   }
                 }
@@ -478,9 +483,11 @@ function fmajor() {
     letterNote = "G6";
   } else if (!note1.replace(/\s/g, '').length) {
     letterNote = "pause";
-  } else {   
-    letterNote = "A6"
-  }
+  } else if(note1 == 0) {   
+                     letterNote = "A6"
+                    } else {
+                      letterNote = "pause";
+                    }
 }
 
 
@@ -505,9 +512,11 @@ function gmajor() {
     letterNote = "A6";
   } else if (!note1.replace(/\s/g, '').length) {
     letterNote = "pause";
-  } else {   
-    letterNote = "B6"
-  }
+  } else if(note1 == 0) {   
+                     letterNote = "B6"
+                    } else {
+                      letterNote = "pause";
+                    }
 }
 
 
@@ -532,9 +541,11 @@ function cmajorblue() {
     letterNote = "F6";
   } else if (!note1.replace(/\s/g, '').length) {
     letterNote = "pause";
-  } else {   
-    letterNote = "Fsharp6"
-  }
+  } else if(note1 == 0) {   
+                     letterNote = "Fsharp6"
+                    } else {
+                      letterNote = "pause";
+                    }
 }
 
 $(document).on("keypress", function(e) {
