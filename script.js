@@ -154,7 +154,7 @@ document.getElementById("bigBoiTable").style.marginLeft = "0px";
       
       mynumber = "";
       length = "";
-      number = "";
+      //number = "";
       lengthcount = 0;
       break;
     }
@@ -323,6 +323,7 @@ alert(letterNote);
 }
 
 function cmajor() {
+ // alert(note1);
   if (note1 == 1) {
     letterNote = "C5";
   } else {
@@ -350,10 +351,10 @@ function cmajor() {
                   if (note1 == 9) {
                     letterNote = "D6";
                   } else {
-                    if (note1 == 0 || note1 == '0' || note1 == "0" || note1 == "&#48;") {
-                      letterNote = "E6";
-                    } else {
-                      letterNote = "pause";
+                    if (!note1.replace(/\s/g, '').length) {
+                     letterNote = "pause";
+                      } else {   
+                     letterNote = "E6"
                     }
                   }
                 }
@@ -394,8 +395,10 @@ function dmajor() {
                   if (note1 == 9) {
                     letterNote = "E6";
                   } else {
-                    if (note1 == 0) {
-                      letterNote = "Fsharp6";
+                    if (!note1.replace(/\s/g, '').length) {
+                     letterNote = "pause";
+                      } else if(note1 == 0) {   
+                     letterNote = "Fsharp6"
                     } else {
                       letterNote = "pause";
                     }
@@ -438,10 +441,10 @@ function emajor() {
                   if (note1 == 9) {
                     letterNote = "Fsharp6";
                   } else {
-                    if (note1 == 0) {
-                      letterNote = "Gsharp6";
-                    } else {
-                      letterNote = "pause";
+                   if (!note1.replace(/\s/g, '').length) {
+                     letterNote = "pause";
+                      } else {   
+                     letterNote = "Gsharp6"
                     }
                   }
                 }
@@ -473,10 +476,10 @@ function fmajor() {
     letterNote = "F6";
   } else if (note1 == 9) {
     letterNote = "G6";
-  } else if (note1 == 0) {
-    letterNote = "A6";
-  } else {
+  } else if (!note1.replace(/\s/g, '').length) {
     letterNote = "pause";
+  } else {   
+    letterNote = "A6"
   }
 }
 
@@ -500,10 +503,10 @@ function gmajor() {
     letterNote = "G6";
   } else if (note1 == 9) {
     letterNote = "A6";
-  } else if (note1 == 0) {
-    letterNote = "B6";
-  } else {
+  } else if (!note1.replace(/\s/g, '').length) {
     letterNote = "pause";
+  } else {   
+    letterNote = "B6"
   }
 }
 
@@ -527,10 +530,10 @@ function cmajorblue() {
     letterNote = "Eflat6";
   } else if (note1 == 9) {
     letterNote = "F6";
-  } else if (note1 == 0) {
-    letterNote = "Fsharp6";
-  } else {
+  } else if (!note1.replace(/\s/g, '').length) {
     letterNote = "pause";
+  } else {   
+    letterNote = "Fsharp6"
   }
 }
 
