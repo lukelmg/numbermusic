@@ -47,6 +47,10 @@ function getNumber() {
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
+    if (waves == "")
+    
+    
+    
     mynumber = document.getElementById("mainInput").value; //get number of input
 
     var length = mynumber.toString().length; //calculate length of input
@@ -529,6 +533,14 @@ function sleep(milliseconds) {
   }
 }
 
+var waves = "";
+
+function changeWave () {
+  waves = document.getElementById("waves").value;
+}
+
+
+
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 function playNote(frequency, duration) {
@@ -536,7 +548,9 @@ function playNote(frequency, duration) {
   // create Oscillator node
   var oscillator = audioCtx.createOscillator();
 
-  oscillator.type = "sin";
+ 
+    
+  oscillator.type = waves;
   oscillator.frequency.value = frequency; // value in hertz
   oscillator.connect(audioCtx.destination);
   oscillator.start();
@@ -544,6 +558,10 @@ function playNote(frequency, duration) {
   setTimeout(function() {
     oscillator.stop();
   }, duration);
+  
+  
+  
+ 
 }
 
 letterValue();
@@ -556,6 +574,7 @@ var selectedScale = "Select a Scale";
 var readFromSelect = "Select a Scale";
 
 function readSelect() {
+  
   readFromSelect = document.getElementById("scales").value;
 }
 

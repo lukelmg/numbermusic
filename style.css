@@ -82,27 +82,27 @@ font-family: 'Roboto', sans-serif;
 }
 
 
-#scales {
+.scales {
   background-color:white;
   border: 1px solid gray;
   color:gray;
   font-family:arial;
   outline:none;
   height: 7vh;
-  width: 11vw;
+  width: 5.25vw;
   transition: .2s ease-in;
   cursor: pointer;
   
 }
 
 
-#scales:hover {
+.scales:hover {
   background-color: #E8E8E8;
   color:gray;
   outline:none;
 }
 
-#scales:focus {
+.scales:focus {
   outline:none;
 }
 
@@ -340,7 +340,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 
-#scales {
+.scales {
   background-color:white;
   border: 1px solid gray;
   color:gray;
@@ -354,13 +354,13 @@ font-family: 'Roboto', sans-serif;
 }
 
 
-#scales:hover {
+.scales:hover {
   background-color: #E8E8E8;
   color:gray;
   outline:none;
 }
 
-#scales:focus {
+.scales:focus {
   outline:none;
 }
 
