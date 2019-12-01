@@ -1,7 +1,6 @@
 function stopAll() {
-  throw new Error('This is not an error. This is just to abort javascript');
+  throw new Error("This is not an error. This is just to abort javascript");
 }
-
 
 var input = document.getElementById("mainInput");
 document.getElementById("mainInput").focus();
@@ -13,7 +12,6 @@ var noteDuration = 250;
 var tempo = 120;
 
 var tempoToMil = (60 / tempo) * 1000;
-//alert(tempoToMil);
 
 var A = document.getElementById("pianoA");
 var B = document.getElementById("pianoB");
@@ -31,13 +29,12 @@ var letterNote = "A";
 
 var mynumber;
 
-
 var extraDelayTime;
 
 function disablePlay() {
   document.getElementById("submitButton").innerHTML = "Please Wait";
   document.getElementById("submitButton").disabled = true;
-  
+
   setTimeout(doSomething, extraDelayTime);
 }
 
@@ -47,121 +44,93 @@ function doSomething() {
 }
 
 function getNumber() {
-  
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
+    mynumber = document.getElementById("mainInput").value; //get number of input
 
-  mynumber = document.getElementById("mainInput").value; //get number of input
-   // alert(mynumber);
-  var length = mynumber.toString().length; //calculate length of input
-      extraDelayTime = length * tempoToMil;
-      disablePlay();
+    var length = mynumber.toString().length; //calculate length of input
+    extraDelayTime = length * tempoToMil;
+    disablePlay();
 
-/*  var number = mynumber,
-    output = [],
-    sNumber = number.toString();
-    */
-    
- var split = mynumber.split('');
-    alert(split);
 
-  for (var i = 0; i < length; i++) {
-     setTimeout(function() {
-   //  output.push(+sNumber[lengthcount]); //change i to lengthcount
-      //alert(output);
-      
-      note1 = split[length - length + lengthcount];
-      // alert(note1);
-     
-      convertSelectToFunctions();
+    var split = mynumber.split("");
 
-      noteToPlay[letterNote]();
-      
-      lengthcount = lengthcount + 1;
-       
-       
-       
-    }, (tempoToMil) * i);
+    for (var i = 0; i < length; i++) {
+      setTimeout(function() {
 
-    if (i == length - 1) {
-      document.getElementById("submitButton").innerHTML = "Play";
-      
-      i = 0;
-      mynumber = "";
-      length = "";
-    //  number = "";
-      lengthcount = 0;
-      break;
-      
+        note1 = split[length - length + lengthcount];
+
+        convertSelectToFunctions();
+
+        noteToPlay[letterNote]();
+
+        lengthcount = lengthcount + 1;
+      }, tempoToMil * i);
+
+      if (i == length - 1) {
+        document.getElementById("submitButton").innerHTML = "Play";
+
+        i = 0;
+        mynumber = "";
+        length = "";
+        lengthcount = 0;
+        break;
+      }
     }
+    document.getElementById("submitButton").disabled = false;
   }
-           document.getElementById("submitButton").disabled = false;
-  }
-    
 }
-
 
 function newNew() {
   getNumber();
 }
 
 function getNumberNoSound() {
-  
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
-  
-  
-   var length = mynumber.toString().length; //calculate length of input
-      extraDelayTime = length * tempoToMil;
-      disablePlay();
-    
- var split = mynumber.split('');
+    var length = mynumber.toString().length; //calculate length of input
+    extraDelayTime = length * tempoToMil;
+    disablePlay();
 
+    var split = mynumber.split("");
 
-  for (var i = 0; i < length; i++) {
-     setTimeout(function() {
-     
-      note1 = split[length - length + lengthcount];
-      convertSelectToFunctions();
+    for (var i = 0; i < length; i++) {
+      setTimeout(function() {
+        note1 = split[length - length + lengthcount];
+        convertSelectToFunctions();
 
-      
-      
-      lengthcount = lengthcount + 1;
-       
-       var res = letterNote.replace("sharp", " #");
-       
-       res = res.replace("flat", "&#9837;");
-       
-       res = res.replace("5", "");
-       
-       res = res.replace("6", "");
-       
-       if (lengthcount == 10) {
-         lengthcount = 0;
-       }
-       
-       document.getElementById(lengthcount).innerHTML = res;
+        lengthcount = lengthcount + 1;
 
-       
-document.getElementById("bigBoiTable").style.marginLeft = "0px";
+        var res = letterNote.replace("sharp", " #");
 
-    }, (1) * i);
+        res = res.replace("flat", "&#9837;");
 
-    if (i == length - 1) {
-      i = 0;
-      
-      mynumber = "";
-      length = "";
-      //number = "";
-      lengthcount = 0;
-      break;
+        res = res.replace("5", "");
+
+        res = res.replace("6", "");
+
+        if (lengthcount == 10) {
+          lengthcount = 0;
+        }
+
+        document.getElementById(lengthcount).innerHTML = res;
+
+        document.getElementById("bigBoiTable").style.marginLeft = "0px";
+      }, 1 * i);
+
+      if (i == length - 1) {
+        i = 0;
+
+        mynumber = "";
+        length = "";
+        lengthcount = 0;
+        break;
+      }
     }
   }
-  }
 }
-
 
 var frequency = 440.0;
 var context = new AudioContext();
@@ -174,9 +143,9 @@ var Eflat5 = 311.13;
 var E5 = 329.63;
 var F5 = 349.23;
 var Fsharp5 = 369.99;
-var G5 = 392.00;
-var Gsharp5 = 415.30;
-var A5 = 440.00;
+var G5 = 392.0;
+var Gsharp5 = 415.3;
+var A5 = 440.0;
 var Bflat5 = 466.16;
 var B5 = 493.88;
 
@@ -318,12 +287,12 @@ function detectNote1() {
       }
     }
   }
-alert(letterNote);
+  alert(letterNote);
   document.getElementById("output").innerHTML = letterNote;
 }
 
 function cmajor() {
- // alert(note1);
+  // alert(note1);
   if (note1 == 1) {
     letterNote = "C5";
   } else {
@@ -351,10 +320,10 @@ function cmajor() {
                   if (note1 == 9) {
                     letterNote = "D6";
                   } else {
-                    if (!note1.replace(/\s/g, '').length) {
-                     letterNote = "pause";
-                      } else if(note1 == 0) {   
-                     letterNote = "E6"
+                    if (!note1.replace(/\s/g, "").length) {
+                      letterNote = "pause";
+                    } else if (note1 == 0) {
+                      letterNote = "E6";
                     } else {
                       letterNote = "pause";
                     }
@@ -397,14 +366,13 @@ function dmajor() {
                   if (note1 == 9) {
                     letterNote = "E6";
                   } else {
-                    if (!note1.replace(/\s/g, '').length) {
-                     letterNote = "pause";
-                      } else if(note1 == 0) {   
-                     letterNote = "Fsharp6"
+                    if (!note1.replace(/\s/g, "").length) {
+                      letterNote = "pause";
+                    } else if (note1 == 0) {
+                      letterNote = "Fsharp6";
                     } else {
                       letterNote = "pause";
                     }
-                    
                   }
                 }
               }
@@ -444,10 +412,10 @@ function emajor() {
                   if (note1 == 9) {
                     letterNote = "Fsharp6";
                   } else {
-                   if (!note1.replace(/\s/g, '').length) {
-                     letterNote = "pause";
-                      } else if(note1 == 0) {   
-                     letterNote = "Gsharp6"
+                    if (!note1.replace(/\s/g, "").length) {
+                      letterNote = "pause";
+                    } else if (note1 == 0) {
+                      letterNote = "Gsharp6";
                     } else {
                       letterNote = "pause";
                     }
@@ -481,15 +449,14 @@ function fmajor() {
     letterNote = "F6";
   } else if (note1 == 9) {
     letterNote = "G6";
-  } else if (!note1.replace(/\s/g, '').length) {
+  } else if (!note1.replace(/\s/g, "").length) {
     letterNote = "pause";
-  } else if(note1 == 0) {   
-                     letterNote = "A6"
-                    } else {
-                      letterNote = "pause";
-                    }
+  } else if (note1 == 0) {
+    letterNote = "A6";
+  } else {
+    letterNote = "pause";
+  }
 }
-
 
 function gmajor() {
   if (note1 == 1) {
@@ -510,15 +477,14 @@ function gmajor() {
     letterNote = "G6";
   } else if (note1 == 9) {
     letterNote = "A6";
-  } else if (!note1.replace(/\s/g, '').length) {
+  } else if (!note1.replace(/\s/g, "").length) {
     letterNote = "pause";
-  } else if(note1 == 0) {   
-                     letterNote = "B6"
-                    } else {
-                      letterNote = "pause";
-                    }
+  } else if (note1 == 0) {
+    letterNote = "B6";
+  } else {
+    letterNote = "pause";
+  }
 }
-
 
 function cmajorblue() {
   if (note1 == 1) {
@@ -539,13 +505,13 @@ function cmajorblue() {
     letterNote = "Eflat6";
   } else if (note1 == 9) {
     letterNote = "F6";
-  } else if (!note1.replace(/\s/g, '').length) {
+  } else if (!note1.replace(/\s/g, "").length) {
     letterNote = "pause";
-  } else if(note1 == 0) {   
-                     letterNote = "Fsharp6"
-                    } else {
-                      letterNote = "pause";
-                    }
+  } else if (note1 == 0) {
+    letterNote = "Fsharp6";
+  } else {
+    letterNote = "pause";
+  }
 }
 
 $(document).on("keypress", function(e) {
@@ -566,10 +532,11 @@ function sleep(milliseconds) {
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 function playNote(frequency, duration) {
+  
   // create Oscillator node
   var oscillator = audioCtx.createOscillator();
 
-  oscillator.type = "square";
+  oscillator.type = "sin";
   oscillator.frequency.value = frequency; // value in hertz
   oscillator.connect(audioCtx.destination);
   oscillator.start();
@@ -581,9 +548,7 @@ function playNote(frequency, duration) {
 
 letterValue();
 function letterValue(str) {
-
   var cmajNotes = ["C5", "Csharp5", "D5", "Eflat5", "E5", "F5"];
-
 }
 
 var selectedScale = "Select a Scale";
@@ -610,14 +575,12 @@ function convertSelectToFunctions() {
   }
 }
 
-
-
 function readTempo() {
-  
   readArt();
   var tempo = document.getElementById("tempoSlider").value;
-  document.getElementById("tempoOutput").innerHTML = "&#9833; = " + tempo + " BPM";
-  
+  document.getElementById("tempoOutput").innerHTML =
+    "&#9833; = " + tempo + " BPM";
+
   var actualTiming = 60 / tempo;
   actualTiming = (actualTiming * 1000) / 2;
   tempoToMil = actualTiming;
@@ -625,9 +588,8 @@ function readTempo() {
 }
 
 function readArt() {
-
   var articulation = document.getElementById("articulationSlider").value;
-  var output = "&#119186;"
+  var output = "&#119186;";
   if (articulation == 1) {
     output = "Stacato";
     noteDuration = tempoToMil / 8;
@@ -642,30 +604,35 @@ function readArt() {
     noteDuration = tempoToMil - 25;
   }
   document.getElementById("articulationOut").innerHTML = output;
- 
 }
 
 function alertTest() {
-alert("Step 1: Type in a number (or select a preset) to convert to music [Dashes register as rests] \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play")
+  alert(
+    "Step 1: Type in a number (or select a preset) to convert to music [Dashes register as rests] \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play"
+  );
 }
 
-
-function fillPi () {
-  document.getElementById("mainInput").value = "3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342";
+function fillPi() {
+  document.getElementById("mainInput").value =
+    "3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342";
 }
-function fillE () {
-  document.getElementById("mainInput").value = "2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525";
+function fillE() {
+  document.getElementById("mainInput").value =
+    "2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525";
 }
 function fillSq2() {
-  document.getElementById("mainInput").value = "1.41421356237309504880168872420969807856967187537694807317667973799073247846210703885038753432";
+  document.getElementById("mainInput").value =
+    "1.41421356237309504880168872420969807856967187537694807317667973799073247846210703885038753432";
 }
 function fillPhi() {
-  document.getElementById("mainInput").value = "1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418"
+  document.getElementById("mainInput").value =
+    "1.61803398874989484820458683436563811772030917980576286213544862270526046281890244970720720418";
 }
 function fillSq3() {
-  document.getElementById("mainInput").value = "1.732050807568877293527446341505872366942805253810380628055806979451933016908800037081146186757";
+  document.getElementById("mainInput").value =
+    "1.732050807568877293527446341505872366942805253810380628055806979451933016908800037081146186757";
 }
-function fillC () {
+function fillC() {
   document.getElementById("mainInput").value = "299792458";
 }
 function clearMainInput() {
