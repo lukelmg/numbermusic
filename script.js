@@ -47,7 +47,9 @@ function getNumber() {
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
-    if (waves == "")
+    if (waves == "") {
+      alert("Please select a wave shape");
+    } else {
     
     
     
@@ -84,6 +86,7 @@ function getNumber() {
     }
     document.getElementById("submitButton").disabled = false;
   }
+}
 }
 
 function newNew() {
@@ -533,10 +536,11 @@ function sleep(milliseconds) {
   }
 }
 
-var waves = "";
+var waves = "square";
 
 function changeWave () {
   waves = document.getElementById("waves").value;
+//  alert(waves);
 }
 
 
@@ -548,8 +552,6 @@ function playNote(frequency, duration) {
   // create Oscillator node
   var oscillator = audioCtx.createOscillator();
 
- 
-    
   oscillator.type = waves;
   oscillator.frequency.value = frequency; // value in hertz
   oscillator.connect(audioCtx.destination);

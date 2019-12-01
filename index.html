@@ -61,13 +61,13 @@
     
     <select class="scales" id="waves" onchange="changeWave();">
       <option style="font-weight:bold;" selected disabled>Waves</option>
-      <option>Sine</option>
-      <option>Square</option>
-      <option>Triangle</option>
-      <option>Sawtooth</option>
+      <option>sine</option>
+      <option>square</option>
+      <option>triangle</option>
+      <option>sawtooth</option>
     </select>
     
-    <button id="submitButton" onclick="newNew(); readSelect();">Play</button>
+    <button id="submitButton" onclick="newNew(); readSelect(); changeWave();">Play</button>
        <br><br> <span></span><span id="output"></span>
     <table id="bigBoiTable" style="text-align: left;">
   <tr>
