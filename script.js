@@ -1,3 +1,14 @@
+function buttonTest() {
+  
+     changeWave();
+  readSelect();
+  
+  
+  newNew();
+
+
+}
+
 
 function stopAll() {
   throw new Error("This is not an error. This is just to abort javascript");
