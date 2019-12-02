@@ -60,7 +60,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 
-.submitButton {
+#submitButton {
   background-color:white;
   border: 1px solid gray;
   color:gray;
@@ -73,12 +73,12 @@ font-family: 'Roboto', sans-serif;
   margin-left: .8vw;
 }
 
-.submitButton:hover {
+#submitButton:hover {
   background-color:#E8E8E8;
     color:gray;
 }
 
-.submitButton:after {
+#submitButton:after {
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
 	-moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
 	-ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
