@@ -74,6 +74,12 @@ font-family: 'Roboto', sans-serif;
 }
 
 #mainInput {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+  
+  
   background-color: #gray;
   color: black;
   border:none;
@@ -84,6 +90,7 @@ font-family: 'Roboto', sans-serif;
   border: 1px solid gray;
   font-family: 'Roboto', sans-serif;
   margin-bottom:0px;
+  shadow:none;
 }
 
 #mainInput:focus { color: black; outline:none; }
@@ -106,6 +113,7 @@ font-family: 'Roboto', sans-serif;
    cursor: pointer;
   margin-left: .8vw;
   marign-top: 1vw;
+  touch-action: manipulation;
 }
 
 #submitButton:hover {
@@ -160,6 +168,7 @@ font-family: 'Roboto', sans-serif;
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
+  -webkit-appearance: none;
 }
 
 .slider:hover {
@@ -193,9 +202,11 @@ font-family: 'Roboto', sans-serif;
   height: 20vw;
   display:inline-block;
   float:left;
+  -webkit-appearance: none;
 }
 
 .accentDiv {
+  -webkit-appearance: none;
   display:inline-block;
   color:gray;
   background-color: white;
@@ -204,6 +215,7 @@ font-family: 'Roboto', sans-serif;
   width: 30vw;
   height: 20vw;
   margin-left: 1vw;
+  -webkit-appearance: none;
 }
 
 
@@ -211,6 +223,7 @@ font-family: 'Roboto', sans-serif;
   color:gray;
   font-weigth:300;
   font-size: 4vw;
+  -webkit-appearance: none;
 }
 
 
@@ -246,7 +259,9 @@ table, th, td {
   #clear {
     width: 20vw;
   }
-
+  select {
+    -webkit-appearance: none;
+  }
   
   
 }
