@@ -1,3 +1,4 @@
+
 function stopAll() {
   throw new Error("This is not an error. This is just to abort javascript");
 }
@@ -47,6 +48,12 @@ function getNumber() {
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
+    if (waves == "") {
+      alert("Please select a wave shape");
+    } else {
+    
+    
+    
     mynumber = document.getElementById("mainInput").value; //get number of input
 
     var length = mynumber.toString().length; //calculate length of input
@@ -81,54 +88,88 @@ function getNumber() {
     document.getElementById("submitButton").disabled = false;
   }
 }
+}
+
+function zeroFix() {
+  //alert("new");
+note1 = "0";
+convertSelectToFunctions();
+
+   var res = letterNote.replace("sharp", " #");
+       
+       res = res.replace("flat", "&#9837;");
+       
+       res = res.replace("5", "");
+       
+       res = res.replace("6", "");
+       
+       var display = lengthcount;
+       
+      // alert(display);
+       
+        document.getElementById(0).innerHTML = res;
+}
+
 
 function newNew() {
   getNumber();
 }
-
+  $("table").show();
 function getNumberNoSound() {
+  
   if (readFromSelect == "Select a Scale") {
     alert("Please select a scale");
   } else {
-    var length = mynumber.toString().length; //calculate length of input
-    extraDelayTime = length * tempoToMil;
-    disablePlay();
+  
+  
+  mynumber = 1234567890;
+  var length = mynumber.toString().length; //calculate length of input
 
-    var split = mynumber.split("");
+  var number = mynumber,
+    output = [],
+    sNumber = number.toString();
 
-    for (var i = 0; i < length; i++) {
-      setTimeout(function() {
-        note1 = split[length - length + lengthcount];
-        convertSelectToFunctions();
+  for (var i = 0; i < length; i++) {
+     setTimeout(function() {
+      output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
+      note1 = output[length - length + lengthcount];
+      convertSelectToFunctions();
 
-        lengthcount = lengthcount + 1;
+      
+      
+      lengthcount = lengthcount + 1;
+       
+       var res = letterNote.replace("sharp", " #");
+       
+       res = res.replace("flat", "&#9837;");
+       
+       res = res.replace("5", "");
+       
+       res = res.replace("6", "");
+       
+       var display = lengthcount;
+       
+          if (display == 9) {
+         zeroFix();
+       }
+       
+       document.getElementById(display).innerHTML = res;
 
-        var res = letterNote.replace("sharp", " #");
+       
+document.getElementById("bigBoiTable").style.marginLeft = "0px";
 
-        res = res.replace("flat", "&#9837;");
+    }, (1) * i);
 
-        res = res.replace("5", "");
-
-        res = res.replace("6", "");
-
-        if (lengthcount == 10) {
-          lengthcount = 0;
-        }
-
-        document.getElementById(lengthcount).innerHTML = res;
-
-        document.getElementById("bigBoiTable").style.marginLeft = "0px";
-      }, 1 * i);
-
-      if (i == length - 1) {
-        i = 0;
-
-        mynumber = "";
-        length = "";
-        lengthcount = 0;
-        break;
-      }
+    if (i == length - 1) {
+      i = 0;
+      
+      mynumber = "";
+      length = "";
+      number = "";
+      lengthcount = 0;
+      break;
     }
+  }
   }
 }
 
@@ -529,6 +570,15 @@ function sleep(milliseconds) {
   }
 }
 
+var waves = "square";
+
+function changeWave () {
+  waves = document.getElementById("waves").value;
+//  alert(waves);
+}
+
+
+
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
 function playNote(frequency, duration) {
@@ -536,7 +586,7 @@ function playNote(frequency, duration) {
   // create Oscillator node
   var oscillator = audioCtx.createOscillator();
 
-  oscillator.type = "sin";
+  oscillator.type = waves;
   oscillator.frequency.value = frequency; // value in hertz
   oscillator.connect(audioCtx.destination);
   oscillator.start();
@@ -544,6 +594,10 @@ function playNote(frequency, duration) {
   setTimeout(function() {
     oscillator.stop();
   }, duration);
+  
+  
+  
+ 
 }
 
 letterValue();
@@ -556,6 +610,7 @@ var selectedScale = "Select a Scale";
 var readFromSelect = "Select a Scale";
 
 function readSelect() {
+  
   readFromSelect = document.getElementById("scales").value;
 }
 
@@ -608,7 +663,7 @@ function readArt() {
 
 function alertTest() {
   alert(
-    "Step 1: Type in a number (or select a preset) to convert to music [Dashes register as rests] \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Press play"
+    "Step 1: Type in a number (or select a preset) to convert to music [Dashes register as rests] \n \n Step 2: Select a tempo (Drag the slider) \n \n Step 3: Select an articulation \n \n Step 4: Select a scale for the music to be based on \n \n Step 5: Select a wave shape (square is best) \n \n Step 6: Press play"
   );
 }
 

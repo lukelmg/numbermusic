@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140137723-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-140137723-4');
+</script>
+
+    
 <link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
     <title>Hello!</title>
@@ -49,8 +61,8 @@
     
     <br> <br>
     
-      <select id="scales" onchange="readSelect(); getNumberNoSound();">
-      <option style="font-weight:bold;" selected disabled>Select a Scale</option>
+      <select class="scales" id="scales" onchange="readSelect(); getNumberNoSound();">
+      <option style="font-weight:bold;" selected disabled>Scales</option>
       <option id="Cmaj">C Major</option>
       <option id="Dmaj">D Major</option>
       <option id="Emaj">E Major</option>
@@ -58,7 +70,16 @@
       <option id="Gmaj">G Major</option>
       <option id="Amaj">C Major Blues</option>
     </select>
-    <button id="submitButton" onclick="newNew(); readSelect();">Play</button>
+    
+    <select class="scales" id="waves" onchange="changeWave();">
+      <option style="font-weight:bold;" selected disabled>Waves</option>
+      <option>sine</option>
+      <option>square</option>
+      <option>triangle</option>
+      <option>sawtooth</option>
+    </select>
+    <br class="mobileOnly"><br class="mobileOnly">
+    <button id="submitButton" onclick="newNew(); readSelect(); changeWave();">Play</button>
        <br><br> <span></span><span id="output"></span>
     <table id="bigBoiTable" style="text-align: left;">
   <tr>

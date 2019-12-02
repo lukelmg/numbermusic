@@ -9,6 +9,10 @@ body {
   background-color:#white;
 }
 
+.mobileOnly {
+  display:none;
+}
+
 h1 {
   color: black;
   font-size: 5vh;
@@ -82,27 +86,27 @@ font-family: 'Roboto', sans-serif;
 }
 
 
-#scales {
+.scales {
   background-color:white;
   border: 1px solid gray;
   color:gray;
   font-family:arial;
   outline:none;
   height: 7vh;
-  width: 11vw;
+  width: 5.25vw;
   transition: .2s ease-in;
   cursor: pointer;
   
 }
 
 
-#scales:hover {
+.scales:hover {
   background-color: #E8E8E8;
   color:gray;
   outline:none;
 }
 
-#scales:focus {
+.scales:focus {
   outline:none;
 }
 
@@ -218,7 +222,6 @@ table, th, td {
   color:gray;
   margin-left: 50px;
   font-size:.9vw;
-  display:none;
 
 }
 
@@ -230,7 +233,9 @@ table, th, td {
   
   
   
-
+.mobileOnly {
+  display:block;
+}
 
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
@@ -266,7 +271,7 @@ h2 {
   color:gray;
   font-family:arial;
   outline:none;
-  height: 5vh;
+  height: 6vw;
   width: 87vw;
   transition: .2s ease-in;
    cursor: pointer;
@@ -320,11 +325,12 @@ font-family: 'Roboto', sans-serif;
   color:gray;
   font-family:arial;
   outline:none;
-  height: 15vw;
+  height: 8vw;
   width: 33.5vw;
   transition: .2s ease-in;
    cursor: pointer;
   margin-left: .8vw;
+  marign-top: 0px;
 }
 
 #submitButton:hover {
@@ -340,7 +346,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 
-#scales {
+.scales {
   background-color:white;
   border: 1px solid gray;
   color:gray;
@@ -354,13 +360,13 @@ font-family: 'Roboto', sans-serif;
 }
 
 
-#scales:hover {
+.scales:hover {
   background-color: #E8E8E8;
   color:gray;
   outline:none;
 }
 
-#scales:focus {
+.scales:focus {
   outline:none;
 }
 
