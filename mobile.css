@@ -52,13 +52,13 @@ h2 {
     margin-bottom: 0px;
     margin-top: 3vh;
     align: center;
-    margin-top: 1vw;
+    margin-top: 0.5vw;
     
   }
   
   #stopRes {
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
   }
 
 .input
