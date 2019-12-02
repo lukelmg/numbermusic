@@ -1,7 +1,8 @@
 function buttonTest() {
   
-     changeWave();
   readSelect();
+  
+     changeWave();
   
   
   newNew();
