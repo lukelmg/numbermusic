@@ -1,10 +1,8 @@
-<!--Github  test -->
-
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140137723-4"></script>
 <script>
@@ -15,7 +13,7 @@
   gtag('config', 'UA-140137723-4');
 </script>
 
-    
+
 <link href="https://fonts.googleapis.com/css?family=Raleway:100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
     <title>Hello!</title>
@@ -28,7 +26,7 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/mobile.css">
     <script src="/script.js" defer></script>
-  </head>  
+  </head>
   <body onload="readTempo(); readArt();">
     <h1>Numbers to Music</h1>
     <span class="main">Copyright &copy Luke Gutman, 2019</span>
@@ -46,25 +44,25 @@
       <button id="clear" class="preset" onclick="clearMainInput();">Clear</button>
 
     </div>
-    
-    
+
+
    <div class="sliderDiv">
     <center><p class="main" id="tempoOutput">
       Tempo
       </p></center>
      <input type="range" min="10" max="240" value="120" class="slider" id="tempoSlider" oninput="readTempo();">
     </div>
-  
-    
+
+
      <div class="accentDiv">
     <center><p class="main" id="articulationOut">
-      Articulation: 
+      Articulation:
       </p></center>
      <input type="range" min="1" max="4" value="3" class="slider" id="articulationSlider" oninput="readArt();">
     </div>
-    
-    <br> 
-    
+
+    <br>
+
       <select class="scales" id="scales" onchange="readSelect(); getNumberNoSound();">
       <option style="font-weight:bold;" selected disabled>Scales</option>
       <option id="Cmaj">C Major</option>
@@ -74,7 +72,7 @@
       <option id="Gmaj">G Major</option>
       <option id="Amaj">C Major Blues</option>
     </select>
-    
+
     <select class="scales" id="waves" onchange="changeWave();">
       <option style="font-weight:bold;" selected disabled>Waves</option>
       <option>sine</option>
@@ -88,7 +86,7 @@
     <table id="bigBoiTable" style="text-align: left;">
   <tr>
     <th align="center">Note</th>
-    <th align="center">Number</th> 
+    <th align="center">Number</th>
   </tr>
   <tr align="center">
     <td id="1"> </td>
@@ -124,8 +122,8 @@
     <td>0</td>
   </tr>
     </table>
-    
-  
-    
+
+
+
   </body>
 </html>
