@@ -90,10 +90,15 @@ function getNumber() {
 }
 }
 
+function zeroFix() {
+  
+}
+
+
 function newNew() {
   getNumber();
 }
-  $("table").hide();
+  $("table").show();
 function getNumberNoSound() {
   
   if (readFromSelect == "Select a Scale") {
@@ -101,17 +106,17 @@ function getNumberNoSound() {
   } else {
   
   
- var mynumber = 123456789000;
+  mynumber = 1234567890;
   var length = mynumber.toString().length; //calculate length of input
 
   var number = mynumber,
     output = [],
     sNumber = number.toString();
 
-  for (var i = -1; i < 10; i++) {
+  for (var i = 0; i < 15; i++) {
      setTimeout(function() {
       output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
-      note1 = output[length - length + lengthcount];
+      note1 = output[lengthcount];
       convertSelectToFunctions();
 
       
@@ -126,22 +131,29 @@ function getNumberNoSound() {
        
        res = res.replace("6", "");
        
-       if (lengthcount == 10) {
-         lengthcount = 0;
-       }
-       console.log(lengthcount);
+       var display = lengthcount;
        
-       document.getElementById(lengthcount).innerHTML = res;
-
-  $("table").show();
-  
+       if (display == 10) {
+         display = 0;
+       }
+       alert(res);
+       
+       document.getElementById(display).innerHTML = res;
 
     }, (1) * i);
 
+    if (i == length - 1) {
+      i = 0;
+      
+      mynumber = "";
+      length = "";
+      number = "";
+      lengthcount = 0;
+      break;
+    }
   }
   }
 }
-
 
 var frequency = 440.0;
 var context = new AudioContext();
