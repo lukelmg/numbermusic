@@ -91,7 +91,23 @@ function getNumber() {
 }
 
 function zeroFix() {
-  
+  //alert("new");
+note1 = "0";
+convertSelectToFunctions();
+
+   var res = letterNote.replace("sharp", " #");
+       
+       res = res.replace("flat", "&#9837;");
+       
+       res = res.replace("5", "");
+       
+       res = res.replace("6", "");
+       
+       var display = lengthcount;
+       
+      // alert(display);
+       
+        document.getElementById(0).innerHTML = res;
 }
 
 
@@ -113,10 +129,10 @@ function getNumberNoSound() {
     output = [],
     sNumber = number.toString();
 
-  for (var i = 0; i < 15; i++) {
+  for (var i = 0; i < length; i++) {
      setTimeout(function() {
       output.push(+sNumber.charAt(lengthcount)); //change i to lengthcount
-      note1 = output[lengthcount];
+      note1 = output[length - length + lengthcount];
       convertSelectToFunctions();
 
       
@@ -133,12 +149,14 @@ function getNumberNoSound() {
        
        var display = lengthcount;
        
-       if (display == 10) {
-         display = 0;
+          if (display == 9) {
+         zeroFix();
        }
-       alert(res);
        
        document.getElementById(display).innerHTML = res;
+
+       
+document.getElementById("bigBoiTable").style.marginLeft = "0px";
 
     }, (1) * i);
 
