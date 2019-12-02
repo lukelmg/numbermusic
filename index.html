@@ -23,6 +23,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/mobile.css">
     <script src="/script.js" defer></script>
   </head>  
   <body onload="readTempo(); readArt();">
@@ -31,7 +32,7 @@
     <button class="instructions" style="display=inline-block;" onclick="alertTest();">Instructions</button>
     <button id="stopRes" class="instructions" onclick="location.reload();">Reset/Stop</button>
     <input id="mainInput" placeholder="Type Numbers Here">
-    <br><br>
+    <br>
     <div id="presetDiv">
       <button id="pi" class="preset" onclick="fillPi();">&#120529;</button>
       <button id="e" class="preset" onclick="fillE();">e</button>
@@ -41,7 +42,7 @@
       <button id="c" class="preset" onclick="fillC();">c</button>
       <button id="clear" class="preset" onclick="clearMainInput();">Clear</button>
 
-    </div> <br>
+    </div>
     
     
    <div class="sliderDiv">
@@ -59,7 +60,7 @@
      <input type="range" min="1" max="4" value="3" class="slider" id="articulationSlider" oninput="readArt();">
     </div>
     
-    <br> <br>
+    <br> 
     
       <select class="scales" id="scales" onchange="readSelect(); getNumberNoSound();">
       <option style="font-weight:bold;" selected disabled>Scales</option>
