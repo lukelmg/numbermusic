@@ -114,7 +114,7 @@ convertSelectToFunctions();
 function newNew() {
   getNumber();
 }
-  $("table").show();
+  $("table").hide();
 function getNumberNoSound() {
   
   if (readFromSelect == "Select a Scale") {
@@ -154,10 +154,7 @@ function getNumberNoSound() {
        }
        
        document.getElementById(display).innerHTML = res;
-
-       
-document.getElementById("bigBoiTable").style.marginLeft = "0px";
-
+  $("table").show();
     }, (1) * i);
 
     if (i == length - 1) {
