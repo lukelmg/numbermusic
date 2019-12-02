@@ -91,16 +91,20 @@
   }
 
   .submitButton {
-   display:none;
-  }
-  .testButton {
-    display:block;
-    font-size: 5vw;
-    border-radius: 0px;
-    background-color:white;
+    background-color: white;
     border: 1px solid gray;
-    
+    color: gray;
+    font-family: arial;
+    outline: none;
+    height: 8vw;
+    width: 33.5vw;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+    margin-left: 0.8vw;
+    marign-top: 1vw;
+    cursor:pointer;
   }
+
 
   .scales {
     background-color: white;

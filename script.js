@@ -1,5 +1,9 @@
 function testButton() {
   alert("hello");
+ newNew(); 
+  readSelect(); 
+  changeWave();
+  alert("hello2");
 }
 
 
