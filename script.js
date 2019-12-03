@@ -3,13 +3,18 @@ function buttonTest() {
   readSelect();
   
      changeWave();
-  //testasdfadfs
-  
   newNew();
 
+  
 
 }
 
+$("#submitButton").click(function(){
+    
+  newNew();
+  changeWave();
+  readSelect();
+});
 
 function stopAll() {
   throw new Error("This is not an error. This is just to abort javascript");
@@ -79,7 +84,6 @@ function getNumber() {
       setTimeout(function() {
 
         note1 = split[length - length + lengthcount];
-
         convertSelectToFunctions();
 
         noteToPlay[letterNote]();
